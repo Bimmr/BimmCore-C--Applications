@@ -8,7 +8,6 @@ namespace BimmCore.MonoGame.Components
 {
     public class ScreenHandler
     {
-
         private Dictionary<string, Screen> screens;
         private Screen last, current;
 
@@ -44,6 +43,29 @@ namespace BimmCore.MonoGame.Components
         }
 
         /// <summary>
+        /// Remove a screen
+        /// </summary>
+        /// <param name="screen"></param>
+        public void remove(Screen screen)
+        {
+            Dictionary<string, Screen> s2 = new Dictionary<string, Screen> (screens);
+            foreach (KeyValuePair<string, Screen> entry in s2)
+            {
+                if (entry.Value == screen)
+                    screens.Remove(entry.Key);
+            }
+        }
+
+        /// <summary>
+        /// Remove a screen
+        /// </summary>
+        /// <param name="screen"></param>
+        public void remove(string name)
+        {
+            screens.Remove(name);
+        }
+
+        /// <summary>
         /// Show the Screen based on the name
         /// </summary>
         /// <param name="name"></param>
@@ -52,6 +74,7 @@ namespace BimmCore.MonoGame.Components
             Screen screen = getScreen(name);
             if (current != null)
                 current.hide();
+
             last = current;
 
             current = screen;
@@ -62,12 +85,18 @@ namespace BimmCore.MonoGame.Components
         /// Get the last screen shown
         /// </summary>
         /// <returns></returns>
-        public Screen getLast() { return last; }
+        public Screen getLast()
+        {
+            return last;
+        }
 
         /// <summary>
         /// Get the current screen
         /// </summary>
         /// <returns></returns>
-        public Screen getCurrent() { return current; }
+        public Screen getCurrent()
+        {
+            return current;
+        }
     }
 }

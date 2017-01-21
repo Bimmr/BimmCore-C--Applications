@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="753ce4b2-2f1f-442d-9388-9208b6eb7ec5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.BimmCore/.idea/contentModel.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.BimmCore/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.BimmCore/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.BimmCore/riderModule.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/BimmCore.dll" afterPath="$PROJECT_DIR$/bin/Debug/BimmCore.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/BimmCore.pdb" afterPath="$PROJECT_DIR$/bin/Debug/BimmCore.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obj/Debug/BimmCore.dll" afterPath="$PROJECT_DIR$/obj/Debug/BimmCore.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obj/Debug/BimmCore.pdb" afterPath="$PROJECT_DIR$/obj/Debug/BimmCore.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MonoGame/Components/ScreenHandler.cs" afterPath="$PROJECT_DIR$/MonoGame/Components/ScreenHandler.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/SharpDX.DXGI.xml" afterPath="$PROJECT_DIR$/bin/Debug/SharpDX.DXGI.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/SharpDX.Direct2D1.xml" afterPath="$PROJECT_DIR$/bin/Debug/SharpDX.Direct2D1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/SharpDX.Direct3D11.xml" afterPath="$PROJECT_DIR$/bin/Debug/SharpDX.Direct3D11.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/SharpDX.MediaFoundation.xml" afterPath="$PROJECT_DIR$/bin/Debug/SharpDX.MediaFoundation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/SharpDX.XAudio2.xml" afterPath="$PROJECT_DIR$/bin/Debug/SharpDX.XAudio2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/SharpDX.XInput.xml" afterPath="$PROJECT_DIR$/bin/Debug/SharpDX.XInput.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/SharpDX.xml" afterPath="$PROJECT_DIR$/bin/Debug/SharpDX.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obj/Debug/BimmCore.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/obj/Debug/BimmCore.csproj.FileListAbsolute.txt" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="ScreenHandler.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MonoGame/Components/ScreenHandler.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="64" column="31" lean-forward="false" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+              <folding>
+                <marker date="1484945456024" expanded="true" signature="6:115" ph="..." />
+                <marker date="1484945456024" expanded="true" signature="155:2557" ph="{...}" />
+                <marker date="1484945456024" expanded="true" signature="188:2555" ph="{...}" />
+                <marker date="1484945456024" expanded="true" signature="316:392" ph="{...}" />
+                <marker date="1484945456024" expanded="true" signature="402:561" ph="/// Add screen to screen handler ... " />
+                <marker date="1484945456024" expanded="true" signature="619:719" ph="{...}" />
+                <marker date="1484945456024" expanded="true" signature="729:882" ph="/// Get the screen based on the name ... " />
+                <marker date="1484945456024" expanded="true" signature="927:1152" ph="{...}" />
+                <marker date="1484945456024" expanded="true" signature="1005:1117" ph="{...}" />
+                <marker date="1484945456024" expanded="true" signature="1162:1268" ph="/// Remove a screen ... " />
+                <marker date="1484945456024" expanded="true" signature="1310:1564" ph="{...}" />
+                <marker date="1484945456024" expanded="true" signature="1436:1554" ph="{...}" />
+                <marker date="1484945456024" expanded="true" signature="1574:1680" ph="/// Remove a screen ... " />
+                <marker date="1484945456024" expanded="true" signature="1720:1774" ph="{...}" />
+                <marker date="1484945456024" expanded="true" signature="1784:1906" ph="/// Show the Screen based on the name ... " />
+                <marker date="1484945456024" expanded="true" signature="1944:2160" ph="{...}" />
+                <marker date="1484945456024" expanded="true" signature="2170:2276" ph="/// Get the last screen shown ... " />
+                <marker date="1484945456024" expanded="true" signature="2308:2353" ph="{...}" />
+                <marker date="1484945456024" expanded="true" signature="2363:2466" ph="/// Get the current screen ... " />
+                <marker date="1484945456024" expanded="true" signature="2501:2549" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/MonoGame/Components/ScreenHandler.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BimmCore (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BimmCore" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BimmCore (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BimmCore" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MonoGame" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BimmCore (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BimmCore" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MonoGame" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Graphics" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BimmCore (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BimmCore" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MonoGame" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Components" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="RunManager" selected=".NET Project.Default">
+    <configuration default="true" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue=".NET Project.Default" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="753ce4b2-2f1f-442d-9388-9208b6eb7ec5" name="Default" comment="" />
+      <created>1484943737597</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1484943737597</updated>
+      <workItem from="1484943738817" duration="1546000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1546000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14818764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors in solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="UnitTesting" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/MonoGame/Graphics/ScrollingBackground.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="70" column="34" lean-forward="true" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
+          <folding>
+            <marker date="1484942579317" expanded="true" signature="6:110" ph="..." />
+            <marker date="1484942579317" expanded="true" signature="148:3476" ph="{...}" />
+            <marker date="1484942579317" expanded="true" signature="176:242" ph="{...}" />
+            <marker date="1484942579317" expanded="true" signature="280:3474" ph="{...}" />
+            <marker date="1484942579317" expanded="true" signature="536:1666" ph="{...}" />
+            <marker date="1484942579317" expanded="true" signature="677:1656" ph="{...}" />
+            <marker date="1484942579317" expanded="true" signature="1694:3256" ph="{...}" />
+            <marker date="1484942579317" expanded="true" signature="1805:3246" ph="{...}" />
+            <marker date="1484942579317" expanded="true" signature="3284:3468" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MonoGame/Components/ScreenHandler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="64" column="31" lean-forward="false" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+          <folding>
+            <marker date="1484945456024" expanded="true" signature="6:115" ph="..." />
+            <marker date="1484945456024" expanded="true" signature="155:2557" ph="{...}" />
+            <marker date="1484945456024" expanded="true" signature="188:2555" ph="{...}" />
+            <marker date="1484945456024" expanded="true" signature="316:392" ph="{...}" />
+            <marker date="1484945456024" expanded="true" signature="402:561" ph="/// Add screen to screen handler ... " />
+            <marker date="1484945456024" expanded="true" signature="619:719" ph="{...}" />
+            <marker date="1484945456024" expanded="true" signature="729:882" ph="/// Get the screen based on the name ... " />
+            <marker date="1484945456024" expanded="true" signature="927:1152" ph="{...}" />
+            <marker date="1484945456024" expanded="true" signature="1005:1117" ph="{...}" />
+            <marker date="1484945456024" expanded="true" signature="1162:1268" ph="/// Remove a screen ... " />
+            <marker date="1484945456024" expanded="true" signature="1310:1564" ph="{...}" />
+            <marker date="1484945456024" expanded="true" signature="1436:1554" ph="{...}" />
+            <marker date="1484945456024" expanded="true" signature="1574:1680" ph="/// Remove a screen ... " />
+            <marker date="1484945456024" expanded="true" signature="1720:1774" ph="{...}" />
+            <marker date="1484945456024" expanded="true" signature="1784:1906" ph="/// Show the Screen based on the name ... " />
+            <marker date="1484945456024" expanded="true" signature="1944:2160" ph="{...}" />
+            <marker date="1484945456024" expanded="true" signature="2170:2276" ph="/// Get the last screen shown ... " />
+            <marker date="1484945456024" expanded="true" signature="2308:2353" ph="{...}" />
+            <marker date="1484945456024" expanded="true" signature="2363:2466" ph="/// Get the current screen ... " />
+            <marker date="1484945456024" expanded="true" signature="2501:2549" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
