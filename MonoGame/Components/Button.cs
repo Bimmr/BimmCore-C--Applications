@@ -27,9 +27,10 @@ namespace BimmCore.MonoGame.Components
 
         public Rectangle Size;
         private Sprite _sprite;
+        private Color _boxColor;
 
         private SpriteFont _spriteFont;
-        private Color _color;
+        private Color _textColor;
 
         /// <summary>
         /// Pointless default constructor
@@ -41,15 +42,71 @@ namespace BimmCore.MonoGame.Components
             Size = size;
         }
 
+        /// <summary>
+        /// Set the sprite
+        /// </summary>
+        /// <param name="sprite"></param>
+        /// <returns></returns>
+        public Button setSprite(Sprite sprite)
+        {
+            this._sprite = sprite;
+            return this;
+        }
+
+        /// <summary>
+        /// Set BoxColor
+        /// </summary>
+        /// <param name="color"></param>
+        /// <returns></returns>
+        public Button setBoxColor(Color color)
+        {
+            this._boxColor = color;
+            return this;
+        }
+
+        /// <summary>
+        /// Set Text
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        public Button setText(String[] text)
+        {
+            this.Text = text;
+            return this;
+        }
+        /// <summary>
+        /// Set Text
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        public Button setText(String text)
+        {
+            this.Text = new[] { text };
+            return this;
+        }
+
+        /// <summary>
+        /// Set TextColor
+        /// </summary>
+        /// <param name="color"></param>
+        /// <returns></returns>
+        public Button setTextColor(Color color)
+        {
+            this._textColor = color;
+            return this;
+        }
+
 
         /// <summary>
         /// Sprite Construtor
         /// </summary>
         /// <param name="size"></param>
         /// <param name="sprite"></param>
-        public Button(Rectangle size, Sprite sprite)
+        /// <param name="boxColor"></param>
+        public Button(Rectangle size, Sprite sprite, Color boxColor)
             : this(size)
         {
+            _boxColor = boxColor;
             _sprite = sprite;
         }
 
@@ -60,13 +117,15 @@ namespace BimmCore.MonoGame.Components
         /// <param name="size"></param>
         /// <param name="spriteFont"></param>
         /// <param name="text"></param>
-        /// <param name="color"></param>
-        public Button(Rectangle size, SpriteFont spriteFont, string[] text, Color color)
+        /// <param name="textColor"></param>
+        /// <param name="boxColor"></param>
+        public Button(Rectangle size, SpriteFont spriteFont, string[] text, Color textColor, Color boxColor)
             : this(size)
         {
             Text = text;
             _spriteFont = spriteFont;
-            _color = color;
+            _textColor = textColor;
+            _boxColor = boxColor;
         }
 
         /// <summary>
@@ -75,9 +134,10 @@ namespace BimmCore.MonoGame.Components
         /// <param name="size"></param>
         /// <param name="spriteFont"></param>
         /// <param name="text"></param>
-        /// <param name="color"></param>
-        public Button(Rectangle size, SpriteFont spriteFont, string text, Color color)
-            : this( size, spriteFont, new []{text}, color)
+        /// <param name="textColor"></param>
+        /// <param name="boxColor"></param>
+        public Button(Rectangle size, SpriteFont spriteFont, string text, Color textColor, Color boxColor)
+            : this( size, spriteFont, new []{text}, textColor, boxColor)
         {
         }
 
@@ -89,9 +149,10 @@ namespace BimmCore.MonoGame.Components
         /// <param name="sprite"></param>
         /// <param name="spriteFont"></param>
         /// <param name="text"></param>
-        /// <param name="color"></param>
-        public Button(Rectangle size, Sprite sprite, SpriteFont spriteFont, string[] text, Color color)
-            : this( size, spriteFont, text, color)
+        /// <param name="textColor"></param>
+        /// <param name="boxColor"></param>
+        public Button(Rectangle size, Sprite sprite, SpriteFont spriteFont, string[] text, Color textColor, Color boxColor)
+            : this( size, spriteFont, text, textColor, boxColor)
         {
             _sprite = sprite;
         }
@@ -103,11 +164,12 @@ namespace BimmCore.MonoGame.Components
         /// <param name="size"></param>
         /// <param name="spriteFont"></param>
         /// <param name="text"></param>
-        /// <param name="color"></param>
+        /// <param name="textColor"></param>
+        /// <param name="boxColor"></param>
         /// <param name="onClick"></param>
-        public Button(Rectangle size, SpriteFont spriteFont, string[] text, Color color,
+        public Button(Rectangle size, SpriteFont spriteFont, string[] text, Color textColor, Color boxColor,
             Action<Button, MouseState> onClick)
-            : this( size, spriteFont, text, color)
+            : this( size, spriteFont, text, textColor, boxColor)
         {
             OnClick = onClick;
         }
@@ -118,11 +180,12 @@ namespace BimmCore.MonoGame.Components
         /// <param name="size"></param>
         /// <param name="spriteFont"></param>
         /// <param name="text"></param>
-        /// <param name="color"></param>
+        /// <param name="textColor"></param>
+        /// <param name="boxColor"></param>
         /// <param name="onClick"></param>
-        public Button( Rectangle size, SpriteFont spriteFont, string text, Color color,
+        public Button( Rectangle size, SpriteFont spriteFont, string text, Color textColor, Color boxColor,
             Action<Button, MouseState> onClick)
-            : this( size, spriteFont, new[]{text}, color, onClick)
+            : this( size, spriteFont, new[]{text}, textColor, boxColor, onClick)
         {
         }
 
@@ -235,6 +298,9 @@ namespace BimmCore.MonoGame.Components
             BeforeDraw?.Invoke(gameTime, sp);
             if (_sprite != null)
                 _sprite.draw(sp, new Vector2(Size.X, Size.Y));
+            else
+                Drawer.drawRectangle(Size, _boxColor);
+
             if (Text != null)
             {
                 for (int i = 0; i< Text.Length; i++)
@@ -246,7 +312,7 @@ namespace BimmCore.MonoGame.Components
                     sp.DrawString(_spriteFont, line,
                         CenterText
                             ? Utils.centerText(_spriteFont, line, Size)
-                            : new Vector2(Size.X + (_sprite?.getWidth() ?? 0), y +(_sprite?.getHeight()/10 ?? 0)), _color);
+                            : new Vector2(Size.X + (_sprite?.getWidth() ?? 0), y +(_sprite?.getHeight()/10 ?? 0)), _textColor);
                 }
             }
             AfterDraw?.Invoke(gameTime, sp);
