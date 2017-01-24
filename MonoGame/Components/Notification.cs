@@ -65,9 +65,10 @@ namespace BimmCore.MonoGame.Components
             Action<Button, MouseState> draw =
                 (button, state) => { Drawer.drawRectangle(buttonSize, Color.White * .4f); };
 
-            _button = new Button(
-                    buttonSize,
-                    buttonSprite, textFont, "Ok", Color.White,
+            _button = new Button(buttonSize)
+                .setSprite(buttonSprite)
+                .setSpriteFont(textFont).setText("Ok").setTextColor(Color.White)
+                .setClickEvent(
                     //On Click Perform following code
                     (b, m) =>
                     {
@@ -76,22 +77,20 @@ namespace BimmCore.MonoGame.Components
                             hide();
                             _onButtonClick?.Invoke();
                         }
-                    },
+                    })
+                    .setHoverEvent(
                     //On Hover Perform the following code
                     (b, s) =>
                     {
                         //Set the Draw action to draw the rectangle
                         b.AfterDraw = (b2, s2) => { draw(b, s); };
-                    })
-            {
-                //When not hoviering, set the Action of draw to null
-                OnNotHover = (b, s) =>
-                {
-                    if (b.AfterDraw != null)
-                        b.AfterDraw = null;
-                }
-            }
-                ;
+                    }).setNotClickEvent((b, s) =>
+                    {
+                        if (b.AfterDraw != null)
+                            b.AfterDraw = null;
+                    }
+            );
+
             _screen = screen;
             _title = title;
             _text = text;
@@ -108,7 +107,7 @@ namespace BimmCore.MonoGame.Components
         /// <param name="onBtn"></param>
         /// <param name="sprite"></param>
         public Notification(Screen screen, string title, string[] text, Action onBtn,
-            Sprite sprite, Sprite backgroundSprite, Sprite buttonSprite, SpriteFont titleFont, SpriteFont textFont) 
+            Sprite sprite, Sprite backgroundSprite, Sprite buttonSprite, SpriteFont titleFont, SpriteFont textFont)
             : this(screen, title, text, onBtn, backgroundSprite, buttonSprite, titleFont, textFont)
         {
             _spriteImage = sprite;

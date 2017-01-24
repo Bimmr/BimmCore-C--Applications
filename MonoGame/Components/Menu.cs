@@ -69,7 +69,10 @@ namespace BimmCore.MonoGame.Components
 
             Rectangle rec = new Rectangle(x, y, Size.Width, Size.Height);
 
-            Button btn = new Button(rec, sprite, SpriteFont, text, FontColor, onClick, null);
+            Button btn = new Button(rec)
+                .setSprite(sprite)
+                .setSpriteFont(SpriteFont).setText(text).setTextColor( FontColor)
+                .setClickEvent(onClick);
 
             if (sprite != null)
                 btn.CenterText = false;

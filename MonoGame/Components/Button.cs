@@ -65,6 +65,17 @@ namespace BimmCore.MonoGame.Components
         }
 
         /// <summary>
+        /// Set SpriteFont
+        /// </summary>
+        /// <param name="spriteFont"></param>
+        /// <returns></returns>
+        public Button setSpriteFont(SpriteFont spriteFont)
+        {
+            this._spriteFont = spriteFont;
+            return this;
+        }
+
+        /// <summary>
         /// Set Text
         /// </summary>
         /// <param name="text"></param>
@@ -96,197 +107,46 @@ namespace BimmCore.MonoGame.Components
             return this;
         }
 
-
         /// <summary>
-        /// Sprite Construtor
+        /// Set OnClick Event
         /// </summary>
-        /// <param name="size"></param>
-        /// <param name="sprite"></param>
-        /// <param name="boxColor"></param>
-        public Button(Rectangle size, Sprite sprite, Color boxColor)
-            : this(size)
+        /// <param name="clickEvent"></param>
+        /// <returns></returns>
+        public Button setClickEvent(Action<Button, MouseState> clickEvent)
         {
-            _boxColor = boxColor;
-            _sprite = sprite;
-        }
-
-
-        /// <summary>
-        /// Text Constructor
-        /// </summary>
-        /// <param name="size"></param>
-        /// <param name="spriteFont"></param>
-        /// <param name="text"></param>
-        /// <param name="textColor"></param>
-        /// <param name="boxColor"></param>
-        public Button(Rectangle size, SpriteFont spriteFont, string[] text, Color textColor, Color boxColor)
-            : this(size)
-        {
-            Text = text;
-            _spriteFont = spriteFont;
-            _textColor = textColor;
-            _boxColor = boxColor;
+            this.OnClick = clickEvent;
+            return this;
         }
 
         /// <summary>
-        /// Text Constructor
+        /// Set OnNotClick Event
         /// </summary>
-        /// <param name="size"></param>
-        /// <param name="spriteFont"></param>
-        /// <param name="text"></param>
-        /// <param name="textColor"></param>
-        /// <param name="boxColor"></param>
-        public Button(Rectangle size, SpriteFont spriteFont, string text, Color textColor, Color boxColor)
-            : this( size, spriteFont, new []{text}, textColor, boxColor)
+        /// <param name="notClickEvent"></param>
+        /// <returns></returns>
+        public Button setNotClickEvent(Action<Button, MouseState> notClickEvent)
         {
-        }
-
-
-        /// <summary>
-        /// Sprite and Text Constructor
-        /// </summary>
-        /// <param name="size"></param>
-        /// <param name="sprite"></param>
-        /// <param name="spriteFont"></param>
-        /// <param name="text"></param>
-        /// <param name="textColor"></param>
-        /// <param name="boxColor"></param>
-        public Button(Rectangle size, Sprite sprite, SpriteFont spriteFont, string[] text, Color textColor, Color boxColor)
-            : this( size, spriteFont, text, textColor, boxColor)
-        {
-            _sprite = sprite;
-        }
-
-
-        /// <summary>
-        /// Text and OnClick Constructor
-        /// </summary>
-        /// <param name="size"></param>
-        /// <param name="spriteFont"></param>
-        /// <param name="text"></param>
-        /// <param name="textColor"></param>
-        /// <param name="boxColor"></param>
-        /// <param name="onClick"></param>
-        public Button(Rectangle size, SpriteFont spriteFont, string[] text, Color textColor, Color boxColor,
-            Action<Button, MouseState> onClick)
-            : this( size, spriteFont, text, textColor, boxColor)
-        {
-            OnClick = onClick;
-        }
-
-        /// <summary>
-        /// Text and OnClick Constructor
-        /// </summary>
-        /// <param name="size"></param>
-        /// <param name="spriteFont"></param>
-        /// <param name="text"></param>
-        /// <param name="textColor"></param>
-        /// <param name="boxColor"></param>
-        /// <param name="onClick"></param>
-        public Button( Rectangle size, SpriteFont spriteFont, string text, Color textColor, Color boxColor,
-            Action<Button, MouseState> onClick)
-            : this( size, spriteFont, new[]{text}, textColor, boxColor, onClick)
-        {
-        }
-
-
-        /// <summary>
-        /// Sprite and OnClick Constructor
-        /// </summary>
-        /// <param name="size"></param>
-        /// <param name="sprite"></param>
-        /// <param name="onClick"></param>
-        public Button(Rectangle size, Sprite sprite, Action<Button, MouseState> onClick)
-            : this( size, sprite)
-        {
-            OnClick = onClick;
-        }
-
-
-        /// <summary>
-        /// Text, OnClick, and OnHover Constructor
-        /// </summary>
-        /// <param name="size"></param>
-        /// <param name="spriteFont"></param>
-        /// <param name="text"></param>
-        /// <param name="color"></param>
-        /// <param name="onClick"></param>
-        /// <param name="onHover"></param>
-        public Button( Rectangle size, SpriteFont spriteFont, string[] text, Color color,
-            Action<Button, MouseState> onClick,
-            Action<Button, MouseState> onHover)
-            : this( size, spriteFont, text, color)
-        {
-            OnClick = onClick;
-            OnHover = onHover;
+            this.OnNotClick = notClickEvent;
+            return this;
         }
         /// <summary>
-        /// Text, OnClick, and OnHover Constructor
+        /// Set onHover Event
         /// </summary>
-        /// <param name="size"></param>
-        /// <param name="spriteFont"></param>
-        /// <param name="text"></param>
-        /// <param name="color"></param>
-        /// <param name="onClick"></param>
-        /// <param name="onHover"></param>
-        public Button(Rectangle size, SpriteFont spriteFont, string text, Color color,
-            Action<Button, MouseState> onClick,
-            Action<Button, MouseState> onHover)
-            : this( size, spriteFont, new[]{text}, color, onClick, onHover)
+        /// <param name="hoverEvent"></param>
+        /// <returns></returns>
+        public Button setHoverEvent(Action<Button, MouseState> hoverEvent)
         {
+            this.OnHover = hoverEvent;
+            return this;
         }
-
         /// <summary>
-        /// Sprite, OnClick, and OnHover Constructor
+        /// Set onNotHover Event
         /// </summary>
-        /// <param name="size"></param>
-        /// <param name="sprite"></param>
-        /// <param name="onClick"></param>
-        /// <param name="onHover"></param>
-        public Button(Rectangle size, Sprite sprite, Action<Button, MouseState> onClick,
-            Action<Button, MouseState> onHover)
-            : this( size, sprite)
+        /// <param name="notHoverEvent"></param>
+        /// <returns></returns>
+        public Button setNotHoverEvent(Action<Button, MouseState> notHoverEvent)
         {
-            OnClick = onClick;
-            OnHover = onHover;
-        }
-
-
-        /// <summary>
-        /// Sprite, Text, OnClick and OnHover Constructor
-        /// </summary>
-        /// <param name="size"></param>
-        /// <param name="sprite"></param>
-        /// <param name="spriteFont"></param>
-        /// <param name="text"></param>
-        /// <param name="color"></param>
-        /// <param name="onClick"></param>
-        /// <param name="onHover"></param>
-        public Button(Rectangle size, Sprite sprite, SpriteFont spriteFont, string[] text, Color color,
-            Action<Button, MouseState> onClick,
-            Action<Button, MouseState> onHover)
-            : this( size, spriteFont, text, color)
-        {
-            _sprite = sprite;
-            OnClick = onClick;
-            OnHover = onHover;
-        }
-
-        /// <summary>
-        /// Sprite, Text, OnClick and OnHover Constructor
-        /// </summary>
-        /// <param name="size"></param>
-        /// <param name="sprite"></param>
-        /// <param name="spriteFont"></param>
-        /// <param name="text"></param>
-        /// <param name="color"></param>
-        /// <param name="onClick"></param>
-        /// <param name="onHover"></param>
-        public Button( Rectangle size, Sprite sprite, SpriteFont spriteFont, string text, Color color,
-            Action<Button, MouseState> onClick,
-            Action<Button, MouseState> onHover)
-            : this( size, sprite, spriteFont, new[]{text}, color, onClick, onHover)
-        {
+            this.OnNotHover = notHoverEvent;
+            return this;
         }
 
 
