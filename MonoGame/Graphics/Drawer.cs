@@ -5,6 +5,8 @@ namespace BimmCore.MonoGame.Graphics
 {
     public class Drawer
     {
+
+        private static Texture2D tex;
         
         /// <summary>
         /// Draw a rectangle
@@ -14,9 +16,11 @@ namespace BimmCore.MonoGame.Graphics
         public static void drawRectangle(Rectangle rectangle, Color color)
         {
 
-            Texture2D texture = new Texture2D(MonoHelper.Graphics.GraphicsDevice, 1, 1);
-            texture.SetData(new[] {color});
-            MonoHelper.SpriteBatch.Draw(texture, rectangle, color);
+            if(tex == null)
+                tex = new Texture2D(MonoHelper.Graphics.GraphicsDevice, 1, 1);
+
+            tex.SetData(new[] {color});
+            MonoHelper.SpriteBatch.Draw(tex, rectangle, color);
         }
     }
 }
