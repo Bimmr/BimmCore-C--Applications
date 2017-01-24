@@ -72,6 +72,7 @@ namespace BimmCore.MonoGame.Components
             Button btn = new Button(rec)
                 .setSprite(sprite)
                 .setSpriteFont(SpriteFont).setText(text).setTextColor( FontColor)
+                .setBoxColor(ButtonColor)
                 .setClickEvent(onClick);
 
             if (sprite != null)
