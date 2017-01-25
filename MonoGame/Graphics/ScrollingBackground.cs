@@ -1,96 +1,95 @@
 ﻿using System;
-using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using BimmCore.Misc;
 
 namespace BimmCore.MonoGame.Graphics
 {
-    public enum Direction
-    {
-        Left,
-        Right,
-        Up,
-        Down
-    }
 
     public class ScrollingBackground
     {
-        private Sprite _sprite;
-        private Direction _direction;
-        private Vector2 _speed;
-        private Vector2 _location, _location2;
+        private readonly Sprite sprite;
+        private readonly Direction direction;
+        private readonly Vector2 speed;
+        private Vector2 location, location2;
 
         public ScrollingBackground(Sprite sprite, Vector2 location, int speed, Direction direction)
         {
-            _sprite = sprite;
-            _location = location;
-            _direction = direction;
+            this.sprite = sprite;
+            this.location = location;
+            this.direction = direction;
             switch (direction)
             {
                 case Direction.Left:
-                    _speed = new Vector2(-speed, 0);
-                    _location2 = new Vector2(location.X + sprite.getWidth(), _location.Y);
+                    this.speed = new Vector2(-speed, 0);
+                    location2 = new Vector2(location.X + sprite.getWidth(), this.location.Y);
                     break;
                 case Direction.Right:
-                    _speed = new Vector2(speed, 0);
-                    _location2 = new Vector2(location.X - sprite.getWidth(), _location.Y);
+                    this.speed = new Vector2(speed, 0);
+                    location2 = new Vector2(location.X - sprite.getWidth(), this.location.Y);
                     break;
                 case Direction.Up:
-                    _speed = new Vector2(0, -speed);
-                    _location2 = new Vector2(location.X, _location.Y + sprite.getHeight());
+                    this.speed = new Vector2(0, -speed);
+                    location2 = new Vector2(location.X, this.location.Y + sprite.getHeight());
                     break;
                 case Direction.Down:
-                    _speed = new Vector2(0, speed);
-                    _location2 = new Vector2(location.X, _location.Y - sprite.getHeight());
+                    this.speed = new Vector2(0, speed);
+                    location2 = new Vector2(location.X, this.location.Y - sprite.getHeight());
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
             }
         }
 
+        /// <summary>
+        /// Move the background
+        /// </summary>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public void move()
         {
-            _location += _speed;
-            _location2 += _speed;
+            location += speed;
+            location2 += speed;
 
 
-            switch (_direction)
+            switch (direction)
             {
                 case Direction.Left:
-                    if (_location.X <= -_sprite.getWidth())
-                        _location.X = _location2.X + _sprite.getWidth();
-                    if (_location2.X <= -_sprite.getWidth())
-                        _location2.X = _location.X + _sprite.getWidth();
+                    if (location.X <= -sprite.getWidth())
+                        location.X = location2.X + sprite.getWidth();
+                    if (location2.X <= -sprite.getWidth())
+                        location2.X = location.X + sprite.getWidth();
                     break;
                 case Direction.Right:
-                    if (_location.X >= _sprite.getWidth())
-                        _location.X = _location2.X - _sprite.getWidth();
-                    if (_location2.X >= _sprite.getWidth())
-                        _location2.X = _location.X - _sprite.getWidth();
+                    if (location.X >= sprite.getWidth())
+                        location.X = location2.X - sprite.getWidth();
+                    if (location2.X >= sprite.getWidth())
+                        location2.X = location.X - sprite.getWidth();
                     break;
                 case Direction.Up:
-                    if (_location.Y <= -_sprite.getHeight())
-                        _location.Y = _location2.Y + _sprite.getHeight();
-                    if (_location2.Y <= -_sprite.getHeight())
-                        _location2.Y = _location.Y + _sprite.getHeight();
+                    if (location.Y <= -sprite.getHeight())
+                        location.Y = location2.Y + sprite.getHeight();
+                    if (location2.Y <= -sprite.getHeight())
+                        location2.Y = location.Y + sprite.getHeight();
                     break;
                 case Direction.Down:
-                    if (_location.Y >= _sprite.getHeight())
-                        _location.Y = _location2.Y - _sprite.getHeight();
-                    if (_location2.Y >= _sprite.getHeight())
-                        _location2.Y = _location.Y - _sprite.getHeight();
+                    if (location.Y >= sprite.getHeight())
+                        location.Y = location2.Y - sprite.getHeight();
+                    if (location2.Y >= sprite.getHeight())
+                        location2.Y = location.Y - sprite.getHeight();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
         }
 
+        /// <summary>
+        /// Draw the background
+        /// </summary>
         public void draw()
         {
             SpriteBatch spriteBatch = MonoHelper.SpriteBatch;
-            _sprite.draw(spriteBatch, _location);
-            _sprite.draw(spriteBatch, _location2);
-
+            sprite.draw(spriteBatch, location);
+            sprite.draw(spriteBatch, location2);
         }
     }
 }

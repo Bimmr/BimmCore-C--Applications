@@ -2,22 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="753ce4b2-2f1f-442d-9388-9208b6eb7ec5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.BimmCore/.idea/contentModel.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.BimmCore/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.BimmCore/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.BimmCore/riderModule.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Misc/Direction.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Misc/StringUtils.cs" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Console/StringUtils.cs" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vs/BimmCore/v14/.suo" afterPath="$PROJECT_DIR$/.vs/BimmCore/v14/.suo" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/BimmCore.dll" afterPath="$PROJECT_DIR$/bin/Debug/BimmCore.dll" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/BimmCore.pdb" afterPath="$PROJECT_DIR$/bin/Debug/BimmCore.pdb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obj/Debug/BimmCore.dll" afterPath="$PROJECT_DIR$/obj/Debug/BimmCore.dll" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obj/Debug/BimmCore.pdb" afterPath="$PROJECT_DIR$/obj/Debug/BimmCore.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.BimmCore/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.BimmCore/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BimmCore.csproj" afterPath="$PROJECT_DIR$/BimmCore.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Console/ColorWriter.cs" afterPath="$PROJECT_DIR$/Console/ColorWriter.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MonoGame/Components/Button.cs" afterPath="$PROJECT_DIR$/MonoGame/Components/Button.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MonoGame/Components/Menu.cs" afterPath="$PROJECT_DIR$/MonoGame/Components/Menu.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MonoGame/Components/Notification.cs" afterPath="$PROJECT_DIR$/MonoGame/Components/Notification.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MonoGame/Components/Screen.cs" afterPath="$PROJECT_DIR$/MonoGame/Components/Screen.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MonoGame/Components/ScreenHandler.cs" afterPath="$PROJECT_DIR$/MonoGame/Components/ScreenHandler.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/SharpDX.DXGI.xml" afterPath="$PROJECT_DIR$/bin/Debug/SharpDX.DXGI.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/SharpDX.Direct2D1.xml" afterPath="$PROJECT_DIR$/bin/Debug/SharpDX.Direct2D1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/SharpDX.Direct3D11.xml" afterPath="$PROJECT_DIR$/bin/Debug/SharpDX.Direct3D11.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/SharpDX.MediaFoundation.xml" afterPath="$PROJECT_DIR$/bin/Debug/SharpDX.MediaFoundation.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/SharpDX.XAudio2.xml" afterPath="$PROJECT_DIR$/bin/Debug/SharpDX.XAudio2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/SharpDX.XInput.xml" afterPath="$PROJECT_DIR$/bin/Debug/SharpDX.XInput.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Debug/SharpDX.xml" afterPath="$PROJECT_DIR$/bin/Debug/SharpDX.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MonoGame/EasyRectangle.cs" afterPath="$PROJECT_DIR$/MonoGame/EasyRectangle.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MonoGame/Graphics/Drawer.cs" afterPath="$PROJECT_DIR$/MonoGame/Graphics/Drawer.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MonoGame/Graphics/FrameHelper.cs" afterPath="$PROJECT_DIR$/MonoGame/Graphics/FrameHelper.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MonoGame/Graphics/ScrollingBackground.cs" afterPath="$PROJECT_DIR$/MonoGame/Graphics/ScrollingBackground.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MonoGame/Graphics/Sprite.cs" afterPath="$PROJECT_DIR$/MonoGame/Graphics/Sprite.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MonoGame/MonoHelper.cs" afterPath="$PROJECT_DIR$/MonoGame/MonoHelper.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obj/Debug/BimmCore.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/obj/Debug/BimmCore.csproj.FileListAbsolute.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,33 +39,35 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ScreenHandler.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MonoGame/Components/ScreenHandler.cs">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="StringUtils.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Misc/StringUtils.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="64" column="31" lean-forward="false" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+            <state relative-caret-position="34">
+              <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
               <folding>
-                <marker date="1484945456024" expanded="true" signature="6:115" ph="..." />
-                <marker date="1484945456024" expanded="true" signature="155:2557" ph="{...}" />
-                <marker date="1484945456024" expanded="true" signature="188:2555" ph="{...}" />
-                <marker date="1484945456024" expanded="true" signature="316:392" ph="{...}" />
-                <marker date="1484945456024" expanded="true" signature="402:561" ph="/// Add screen to screen handler ... " />
-                <marker date="1484945456024" expanded="true" signature="619:719" ph="{...}" />
-                <marker date="1484945456024" expanded="true" signature="729:882" ph="/// Get the screen based on the name ... " />
-                <marker date="1484945456024" expanded="true" signature="927:1152" ph="{...}" />
-                <marker date="1484945456024" expanded="true" signature="1005:1117" ph="{...}" />
-                <marker date="1484945456024" expanded="true" signature="1162:1268" ph="/// Remove a screen ... " />
-                <marker date="1484945456024" expanded="true" signature="1310:1564" ph="{...}" />
-                <marker date="1484945456024" expanded="true" signature="1436:1554" ph="{...}" />
-                <marker date="1484945456024" expanded="true" signature="1574:1680" ph="/// Remove a screen ... " />
-                <marker date="1484945456024" expanded="true" signature="1720:1774" ph="{...}" />
-                <marker date="1484945456024" expanded="true" signature="1784:1906" ph="/// Show the Screen based on the name ... " />
-                <marker date="1484945456024" expanded="true" signature="1944:2160" ph="{...}" />
-                <marker date="1484945456024" expanded="true" signature="2170:2276" ph="/// Get the last screen shown ... " />
-                <marker date="1484945456024" expanded="true" signature="2308:2353" ph="{...}" />
-                <marker date="1484945456024" expanded="true" signature="2363:2466" ph="/// Get the current screen ... " />
-                <marker date="1484945456024" expanded="true" signature="2501:2549" ph="{...}" />
+                <marker date="1485325317111" expanded="true" signature="44:453" ph="{...}" />
+                <marker date="1485325317111" expanded="true" signature="83:451" ph="{...}" />
+                <marker date="1485325317111" expanded="true" signature="99:258" ph="/// Check if the word contains any letters ... " />
+                <marker date="1485325317111" expanded="true" signature="318:444" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Drawer.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MonoGame/Graphics/Drawer.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="62" lean-forward="true" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+              <folding>
+                <marker date="1485326023841" expanded="true" signature="6:70" ph="..." />
+                <marker date="1485326023841" expanded="true" signature="108:1278" ph="{...}" />
+                <marker date="1485326023841" expanded="true" signature="134:1276" ph="{...}" />
+                <marker date="1485326023841" expanded="true" signature="150:451" ph="/// Draw a rectangle with a public  ... " />
+                <marker date="1485326023841" expanded="true" signature="526:738" ph="{...}" />
+                <marker date="1485326023841" expanded="true" signature="779:968" ph="/// Draw a rectangle with a texture for just this instance ... " />
+                <marker date="1485326023841" expanded="true" signature="1037:1270" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -72,13 +81,28 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/MonoGame/Components/Input.cs" />
+        <option value="$PROJECT_DIR$/MonoGame/Components/Button.cs" />
+        <option value="$PROJECT_DIR$/MonoGame/Components/Menu.cs" />
+        <option value="$PROJECT_DIR$/MonoGame/Components/Notification.cs" />
+        <option value="$PROJECT_DIR$/MonoGame/Components/Screen.cs" />
         <option value="$PROJECT_DIR$/MonoGame/Components/ScreenHandler.cs" />
+        <option value="$PROJECT_DIR$/MonoGame/Graphics/FrameHelper.cs" />
+        <option value="$PROJECT_DIR$/Misc/Direction.cs" />
+        <option value="$PROJECT_DIR$/MonoGame/Graphics/ScrollingBackground.cs" />
+        <option value="$PROJECT_DIR$/MonoGame/Graphics/Sprite.cs" />
+        <option value="$PROJECT_DIR$/MonoGame/EasyRectangle.cs" />
+        <option value="$PROJECT_DIR$/MonoGame/MonoHelper.cs" />
+        <option value="$PROJECT_DIR$/Console/ColorWriter.cs" />
+        <option value="$PROJECT_DIR$/Console/StringUtils.cs" />
+        <option value="$PROJECT_DIR$/Misc/StringUtils.cs" />
+        <option value="$PROJECT_DIR$/MonoGame/Graphics/Drawer.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="y" value="1072" />
     <option name="width" value="1936" />
     <option name="height" value="1096" />
   </component>
@@ -167,11 +191,25 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MonoGame" />
+              <option name="myItemId" value="Misc" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BimmCore (1 project)" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Components" />
+              <option name="myItemId" value="BimmCore" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Console" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -221,11 +259,12 @@
       <option name="presentableId" value="Default" />
       <updated>1484943737597</updated>
       <workItem from="1484943738817" duration="1546000" />
+      <workItem from="1485324370711" duration="2274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1546000" />
+    <option name="totallyTimeSpent" value="3820000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -237,28 +276,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="1072" width="1936" height="1096" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14818764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Errors in solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="UnitTesting" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors in solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="UnitTesting" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14978679" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -271,49 +311,438 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MonoGame/Graphics/ScrollingBackground.cs">
+    <entry file="file://$PROJECT_DIR$/MonoGame/Components/ScreenHandler.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="70" column="34" lean-forward="true" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1484942579317" expanded="true" signature="6:110" ph="..." />
-            <marker date="1484942579317" expanded="true" signature="148:3476" ph="{...}" />
-            <marker date="1484942579317" expanded="true" signature="176:242" ph="{...}" />
-            <marker date="1484942579317" expanded="true" signature="280:3474" ph="{...}" />
-            <marker date="1484942579317" expanded="true" signature="536:1666" ph="{...}" />
-            <marker date="1484942579317" expanded="true" signature="677:1656" ph="{...}" />
-            <marker date="1484942579317" expanded="true" signature="1694:3256" ph="{...}" />
-            <marker date="1484942579317" expanded="true" signature="1805:3246" ph="{...}" />
-            <marker date="1484942579317" expanded="true" signature="3284:3468" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="73:2472" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="106:2470" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="234:310" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="320:479" ph="/// Add screen to screen handler ... " />
+            <marker date="1485324829564" expanded="true" signature="537:637" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="647:800" ph="/// Get the screen based on the name ... " />
+            <marker date="1485324829564" expanded="true" signature="845:1070" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="923:1035" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="1080:1186" ph="/// Remove a screen ... " />
+            <marker date="1485324829564" expanded="true" signature="1228:1283" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="1228:1514" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="1386:1504" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="1524:1630" ph="/// Remove a screen ... " />
+            <marker date="1485324829564" expanded="true" signature="1670:1724" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="1734:1856" ph="/// Show the Screen based on the name ... " />
+            <marker date="1485324829564" expanded="true" signature="1894:2075" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="1979:2075" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="2085:2191" ph="/// Get the last screen shown ... " />
+            <marker date="1485324829564" expanded="true" signature="2223:2268" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="2278:2381" ph="/// Get the current screen ... " />
+            <marker date="1485324829564" expanded="true" signature="2416:2464" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MonoGame/Components/Input.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1485324705767" expanded="true" signature="6:174" ph="..." />
+            <marker date="1485324705767" expanded="true" signature="214:6337" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="239:6335" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="777:1302" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="844:1292" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="1312:1451" ph="/// Set the box color ... " />
+            <marker date="1485324705767" expanded="true" signature="1497:1572" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="1582:1715" ph="/// Set the text ... " />
+            <marker date="1485324705767" expanded="true" signature="1757:1832" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="1842:2000" ph="/// Set the preview Text(Grayed out text) ... " />
+            <marker date="1485324705767" expanded="true" signature="2049:2126" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="2136:2276" ph="/// Set the text color ... " />
+            <marker date="1485324705767" expanded="true" signature="2323:2399" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="2484:2617" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="2627:2773" ph="/// Set the submit action ... " />
+            <marker date="1485324705767" expanded="true" signature="2833:2916" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="2926:3071" ph="/// Set the KeyTyped action ... " />
+            <marker date="1485324705767" expanded="true" signature="3135:3211" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="3221:3328" ph="/// Draw the Input ... " />
+            <marker date="1485324705767" expanded="true" signature="3372:4520" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="3458:3754" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="4197:4510" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="4530:4639" ph="/// Update the Input ... " />
+            <marker date="1485324705767" expanded="true" signature="4685:5597" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="4852:4912" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="5198:5587" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="5387:5525" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="5607:5709" ph="/// On a Key press ... " />
+            <marker date="1485324705767" expanded="true" signature="5750:5971" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="5981:6063" ph="/// When the submit button is pressed ... " />
+            <marker date="1485324705767" expanded="true" signature="6092:6148" ph="{...}" />
+            <marker date="1485324705767" expanded="true" signature="6158:6252" ph="/// Gets the text ... " />
+            <marker date="1485324705767" expanded="true" signature="6284:6329" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MonoGame/Components/Button.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2345">
+          <caret line="89" column="36" lean-forward="false" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
+          <folding>
+            <marker date="1485324744366" expanded="true" signature="6:155" ph="..." />
+            <marker date="1485324744366" expanded="true" signature="195:7805" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="202:293" ph="/// Button, Don't forget to call the .Draw and .Update ... " />
+            <marker date="1485324744366" expanded="true" signature="317:7803" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="918:1036" ph="/// Pointless default constructor ... " />
+            <marker date="1485324744366" expanded="true" signature="1074:1124" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="1134:1271" ph="/// Set the sprite ... " />
+            <marker date="1485324744366" expanded="true" signature="1318:1397" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="1407:1541" ph="/// Set BoxColor ... " />
+            <marker date="1485324744366" expanded="true" signature="1588:1663" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="1673:1814" ph="/// Set SpriteFont ... " />
+            <marker date="1485324744366" expanded="true" signature="1873:1960" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="1970:2099" ph="/// Set Text ... " />
+            <marker date="1485324744366" expanded="true" signature="2144:2219" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="2229:2358" ph="/// Set Text ... " />
+            <marker date="1485324744366" expanded="true" signature="2401:2484" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="2494:2629" ph="/// Set TextColor ... " />
+            <marker date="1485324744366" expanded="true" signature="2677:2753" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="2763:2907" ph="/// Set OnClick Event ... " />
+            <marker date="1485324744366" expanded="true" signature="2982:3061" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="3071:3221" ph="/// Set OnNotClick Event ... " />
+            <marker date="1485324744366" expanded="true" signature="3302:3387" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="3397:3541" ph="/// Set onHover Event ... " />
+            <marker date="1485324744366" expanded="true" signature="3616:3695" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="3705:3859" ph="/// Set the before draw action ... " />
+            <marker date="1485324744366" expanded="true" signature="3938:4021" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="4031:4182" ph="/// Set the AfterDraw Action ... " />
+            <marker date="1485324744366" expanded="true" signature="4260:4341" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="4351:4507" ph="/// Set the Before Update Action ... " />
+            <marker date="1485324744366" expanded="true" signature="4575:4660" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="4670:4825" ph="/// Set the After update action ... " />
+            <marker date="1485324744366" expanded="true" signature="4892:4976" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="4986:5136" ph="/// Set if the text is centered ... " />
+            <marker date="1485324744366" expanded="true" signature="5185:5263" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="5273:5377" ph="/// Get the AfterDraw event ... " />
+            <marker date="1485324744366" expanded="true" signature="5437:5487" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="5497:5590" ph="/// Get the size ... " />
+            <marker date="1485324744366" expanded="true" signature="5625:5670" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="5680:5830" ph="/// Set onNotHover Event ... " />
+            <marker date="1485324744366" expanded="true" signature="5911:5996" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="6007:6115" ph="/// Draw the Button ... " />
+            <marker date="1485324744366" expanded="true" signature="6159:7063" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="6465:7008" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="6533:6994" ph="{...}" />
+            <marker date="1485324744366" expanded="true" signature="7074:7184" ph="/// Update the button ... " />
+            <marker date="1485324744366" expanded="true" signature="7230:7797" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MonoGame/Components/Notification.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding>
+            <marker date="1485324772395" expanded="true" signature="25:210" ph="..." />
+            <marker date="1485324772395" expanded="true" signature="250:6237" ph="{...}" />
+            <marker date="1485324772395" expanded="true" signature="257:311" ph="/// Notifications ... " />
+            <marker date="1485324772395" expanded="true" signature="365:6235" ph="{...}" />
+            <marker date="1485324772395" expanded="true" signature="984:1281" ph="/// Create a notification with only text ... " />
+            <marker date="1485324772395" expanded="true" signature="1492:3496" ph="{...}" />
+            <marker date="1485324772395" expanded="true" signature="2610:2882" ph="{...}" />
+            <marker date="1485324772395" expanded="true" signature="2718:2860" ph="{...}" />
+            <marker date="1485324772395" expanded="true" signature="3007:3189" ph="{...}" />
+            <marker date="1485324772395" expanded="true" signature="3217:3366" ph="{...}" />
+            <marker date="1485324772395" expanded="true" signature="3506:3844" ph="/// Create a notification with an image ... " />
+            <marker date="1485324772395" expanded="true" signature="4146:4201" ph="{...}" />
+            <marker date="1485324772395" expanded="true" signature="4211:4313" ph="/// Show the notification ... " />
+            <marker date="1485324772395" expanded="true" signature="4348:4435" ph="{...}" />
+            <marker date="1485324772395" expanded="true" signature="4445:4547" ph="/// Hide the notification ... " />
+            <marker date="1485324772395" expanded="true" signature="4582:4672" ph="{...}" />
+            <marker date="1485324772395" expanded="true" signature="4682:4812" ph="/// Update the button in the notification ... " />
+            <marker date="1485324772395" expanded="true" signature="4867:4960" ph="{...}" />
+            <marker date="1485324772395" expanded="true" signature="4970:5084" ph="/// Draw the notification ... " />
+            <marker date="1485324772395" expanded="true" signature="5137:6229" ph="{...}" />
+            <marker date="1485324772395" expanded="true" signature="5933:6184" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MonoGame/Components/Screen.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="77" column="26" lean-forward="false" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
+          <folding>
+            <marker date="1485324796166" expanded="true" signature="6:189" ph="..." />
+            <marker date="1485324796166" expanded="true" signature="229:3296" ph="{...}" />
+            <marker date="1485324796166" expanded="true" signature="288:3294" ph="{...}" />
+            <marker date="1485324796166" expanded="true" signature="635:766" ph="/// Constructor for the screen ... " />
+            <marker date="1485324796166" expanded="true" signature="817:910" ph="{...}" />
+            <marker date="1485324796166" expanded="true" signature="920:984" ph="/// Hide the screen ... " />
+            <marker date="1485324796166" expanded="true" signature="1011:1111" ph="{...}" />
+            <marker date="1485324796166" expanded="true" signature="1121:1185" ph="/// Show the screen ... " />
+            <marker date="1485324796166" expanded="true" signature="1212:1310" ph="{...}" />
+            <marker date="1485324796166" expanded="true" signature="1320:1447" ph="/// Draw all components the screen has ... " />
+            <marker date="1485324796166" expanded="true" signature="1500:1898" ph="{...}" />
+            <marker date="1485324796166" expanded="true" signature="1565:1854" ph="{...}" />
+            <marker date="1485324796166" expanded="true" signature="1908:2037" ph="/// Update all components the screen has ... " />
+            <marker date="1485324796166" expanded="true" signature="2092:2517" ph="{...}" />
+            <marker date="1485324796166" expanded="true" signature="2527:2615" ph="/// Called when the show method gets called ... " />
+            <marker date="1485324796166" expanded="true" signature="2664:2752" ph="/// Called when the hide method gets called ... " />
+            <marker date="1485324796166" expanded="true" signature="2802:3067" ph="/// Show a notification ... " />
+            <marker date="1485324796166" expanded="true" signature="3178:3288" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MonoGame/Components/ScreenHandler.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="64" column="31" lean-forward="false" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+        <state relative-caret-position="545">
+          <caret line="70" column="20" lean-forward="false" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
           <folding>
-            <marker date="1484945456024" expanded="true" signature="6:115" ph="..." />
-            <marker date="1484945456024" expanded="true" signature="155:2557" ph="{...}" />
-            <marker date="1484945456024" expanded="true" signature="188:2555" ph="{...}" />
-            <marker date="1484945456024" expanded="true" signature="316:392" ph="{...}" />
-            <marker date="1484945456024" expanded="true" signature="402:561" ph="/// Add screen to screen handler ... " />
-            <marker date="1484945456024" expanded="true" signature="619:719" ph="{...}" />
-            <marker date="1484945456024" expanded="true" signature="729:882" ph="/// Get the screen based on the name ... " />
-            <marker date="1484945456024" expanded="true" signature="927:1152" ph="{...}" />
-            <marker date="1484945456024" expanded="true" signature="1005:1117" ph="{...}" />
-            <marker date="1484945456024" expanded="true" signature="1162:1268" ph="/// Remove a screen ... " />
-            <marker date="1484945456024" expanded="true" signature="1310:1564" ph="{...}" />
-            <marker date="1484945456024" expanded="true" signature="1436:1554" ph="{...}" />
-            <marker date="1484945456024" expanded="true" signature="1574:1680" ph="/// Remove a screen ... " />
-            <marker date="1484945456024" expanded="true" signature="1720:1774" ph="{...}" />
-            <marker date="1484945456024" expanded="true" signature="1784:1906" ph="/// Show the Screen based on the name ... " />
-            <marker date="1484945456024" expanded="true" signature="1944:2160" ph="{...}" />
-            <marker date="1484945456024" expanded="true" signature="2170:2276" ph="/// Get the last screen shown ... " />
-            <marker date="1484945456024" expanded="true" signature="2308:2353" ph="{...}" />
-            <marker date="1484945456024" expanded="true" signature="2363:2466" ph="/// Get the current screen ... " />
-            <marker date="1484945456024" expanded="true" signature="2501:2549" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="73:2472" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="106:2470" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="234:310" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="320:479" ph="/// Add screen to screen handler ... " />
+            <marker date="1485324829564" expanded="true" signature="537:637" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="647:800" ph="/// Get the screen based on the name ... " />
+            <marker date="1485324829564" expanded="true" signature="845:1070" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="923:1035" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="1080:1186" ph="/// Remove a screen ... " />
+            <marker date="1485324829564" expanded="true" signature="1228:1283" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="1228:1514" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="1386:1504" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="1524:1630" ph="/// Remove a screen ... " />
+            <marker date="1485324829564" expanded="true" signature="1670:1724" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="1734:1856" ph="/// Show the Screen based on the name ... " />
+            <marker date="1485324829564" expanded="true" signature="1894:2075" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="1979:2075" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="2085:2191" ph="/// Get the last screen shown ... " />
+            <marker date="1485324829564" expanded="true" signature="2223:2268" ph="{...}" />
+            <marker date="1485324829564" expanded="true" signature="2278:2381" ph="/// Get the current screen ... " />
+            <marker date="1485324829564" expanded="true" signature="2416:2464" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MonoGame/Components/Menu.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1002">
+          <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding>
+            <marker date="1485324755294" expanded="true" signature="6:189" ph="..." />
+            <marker date="1485324755294" expanded="true" signature="229:3472" ph="{...}" />
+            <marker date="1485324755294" expanded="true" signature="253:3470" ph="{...}" />
+            <marker date="1485324755294" expanded="true" signature="658:784" ph="{...}" />
+            <marker date="1485324755294" expanded="true" signature="911:1005" ph="{...}" />
+            <marker date="1485324755294" expanded="true" signature="1052:1154" ph="{...}" />
+            <marker date="1485324755294" expanded="true" signature="1199:1299" ph="{...}" />
+            <marker date="1485324755294" expanded="true" signature="1393:1467" ph="{...}" />
+            <marker date="1485324755294" expanded="true" signature="1564:3320" ph="{...}" />
+            <marker date="1485324755294" expanded="true" signature="2168:2492" ph="{...}" />
+            <marker date="1485324755294" expanded="true" signature="2233:2476" ph="{...}" />
+            <marker date="1485324755294" expanded="true" signature="2574:2900" ph="{...}" />
+            <marker date="1485324755294" expanded="true" signature="2650:2880" ph="{...}" />
+            <marker date="1485324755294" expanded="true" signature="2986:3195" ph="{...}" />
+            <marker date="1485324755294" expanded="true" signature="3400:3464" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MonoGame/Graphics/FrameHelper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1055">
+          <caret line="66" column="30" lean-forward="false" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+          <folding>
+            <marker date="1485324888102" expanded="true" signature="6:130" ph="..." />
+            <marker date="1485324888102" expanded="true" signature="168:2582" ph="{...}" />
+            <marker date="1485324888102" expanded="true" signature="175:248" ph="/// Framed Texture - Easy Animations ... " />
+            <marker date="1485324888102" expanded="true" signature="277:2580" ph="{...}" />
+            <marker date="1485324888102" expanded="true" signature="494:768" ph="/// Create a framed texture ... " />
+            <marker date="1485324888102" expanded="true" signature="860:1121" ph="{...}" />
+            <marker date="1485324888102" expanded="true" signature="1285:1335" ph="{...}" />
+            <marker date="1485324888102" expanded="true" signature="1345:1411" ph="/// Create the frames ... " />
+            <marker date="1485324888102" expanded="true" signature="1447:1829" ph="{...}" />
+            <marker date="1485324888102" expanded="true" signature="1543:1819" ph="{...}" />
+            <marker date="1485324888102" expanded="true" signature="1603:1805" ph="{...}" />
+            <marker date="1485324888102" expanded="true" signature="1839:1947" ph="/// Get the next frame ... " />
+            <marker date="1485324888102" expanded="true" signature="1987:2268" ph="{...}" />
+            <marker date="1485324888102" expanded="true" signature="2278:2398" ph="///Rectangle ... " />
+            <marker date="1485324888102" expanded="true" signature="2441:2574" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Misc/Direction.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding>
+            <marker date="1485325051862" expanded="true" signature="23:1452" ph="{...}" />
+            <marker date="1485325051862" expanded="true" signature="51:117" ph="{...}" />
+            <marker date="1485325051862" expanded="true" signature="146:1450" ph="{...}" />
+            <marker date="1485325051862" expanded="true" signature="161:320" ph="/// Get the opposite of the direction given ... " />
+            <marker date="1485325051862" expanded="true" signature="379:836" ph="{...}" />
+            <marker date="1485325051862" expanded="true" signature="414:826" ph="{...}" />
+            <marker date="1485325051862" expanded="true" signature="846:1000" ph="/// Check if the direction is vertical ... " />
+            <marker date="1485325051862" expanded="true" signature="1053:1138" ph="{...}" />
+            <marker date="1485325051862" expanded="true" signature="1148:1304" ph="/// Check if the direction is horizontal ... " />
+            <marker date="1485325051862" expanded="true" signature="1359:1444" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MonoGame/Graphics/ScrollingBackground.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="749">
+          <caret line="85" column="31" lean-forward="false" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
+          <folding>
+            <marker date="1485325092286" expanded="true" signature="6:105" ph="..." />
+            <marker date="1485325092286" expanded="true" signature="143:3616" ph="{...}" />
+            <marker date="1485325092286" expanded="true" signature="183:3614" ph="{...}" />
+            <marker date="1485325092286" expanded="true" signature="461:1631" ph="{...}" />
+            <marker date="1485325092286" expanded="true" signature="614:1621" ph="{...}" />
+            <marker date="1485325092286" expanded="true" signature="1641:1780" ph="/// Move the background ... " />
+            <marker date="1485325092286" expanded="true" signature="1807:3324" ph="{...}" />
+            <marker date="1485325092286" expanded="true" signature="1913:3314" ph="{...}" />
+            <marker date="1485325092286" expanded="true" signature="3334:3402" ph="/// Draw the  ... " />
+            <marker date="1485325092286" expanded="true" signature="3429:3608" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MonoGame/Graphics/Sprite.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="766">
+          <caret line="113" column="38" lean-forward="false" selection-start-line="113" selection-start-column="38" selection-end-line="113" selection-end-column="38" />
+          <folding>
+            <marker date="1485325139983" expanded="true" signature="6:70" ph="..." />
+            <marker date="1485325139983" expanded="true" signature="108:3672" ph="{...}" />
+            <marker date="1485325139983" expanded="true" signature="115:162" ph="/// Sprite ... " />
+            <marker date="1485325139983" expanded="true" signature="186:3670" ph="{...}" />
+            <marker date="1485325139983" expanded="true" signature="309:458" ph="/// Create a sprite ... " />
+            <marker date="1485325139983" expanded="true" signature="517:597" ph="{...}" />
+            <marker date="1485325139983" expanded="true" signature="664:754" ph="{...}" />
+            <marker date="1485325139983" expanded="true" signature="765:942" ph="/// Draw a Framed Texture with 1f Opacity ... " />
+            <marker date="1485325139983" expanded="true" signature="1015:1085" ph="{...}" />
+            <marker date="1485325139983" expanded="true" signature="1095:1299" ph="/// Draw a Framed Texture ... " />
+            <marker date="1485325139983" expanded="true" signature="1387:1565" ph="{...}" />
+            <marker date="1485325139983" expanded="true" signature="1598:1658" ph="{...}" />
+            <marker date="1485325139983" expanded="true" signature="1668:1854" ph="/// Draw a sprite using the Source with 1f Opacity ... " />
+            <marker date="1485325139983" expanded="true" signature="1922:1987" ph="{...}" />
+            <marker date="1485325139983" expanded="true" signature="1997:2210" ph="/// Draw a sprite using the Source ... " />
+            <marker date="1485325139983" expanded="true" signature="2293:2371" ph="{...}" />
+            <marker date="1485325139983" expanded="true" signature="2381:2635" ph="/// Draw the sprite with a source ... " />
+            <marker date="1485325139983" expanded="true" signature="2736:2935" ph="{...}" />
+            <marker date="1485325139983" expanded="true" signature="2945:3053" ph="/// Get the width of the sprite ... " />
+            <marker date="1485325139983" expanded="true" signature="3083:3184" ph="{...}" />
+            <marker date="1485325139983" expanded="true" signature="3194:3303" ph="/// Get the Height of the sprite ... " />
+            <marker date="1485325139983" expanded="true" signature="3334:3437" ph="{...}" />
+            <marker date="1485325139983" expanded="true" signature="3447:3554" ph="/// Get the size of the  ... " />
+            <marker date="1485325139983" expanded="true" signature="3587:3664" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MonoGame/EasyRectangle.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding>
+            <marker date="1485325162576" expanded="true" signature="59:1359" ph="{...}" />
+            <marker date="1485325162576" expanded="true" signature="66:263" ph="/// Create an easy rectangle by giving 2 points ... " />
+            <marker date="1485325162576" expanded="true" signature="294:1357" ph="{...}" />
+            <marker date="1485325162576" expanded="true" signature="366:525" ph="/// Create the rectangle ... " />
+            <marker date="1485325162576" expanded="true" signature="578:1074" ph="{...}" />
+            <marker date="1485325162576" expanded="true" signature="617:713" ph="{...}" />
+            <marker date="1485325162576" expanded="true" signature="730:826" ph="{...}" />
+            <marker date="1485325162576" expanded="true" signature="855:951" ph="{...}" />
+            <marker date="1485325162576" expanded="true" signature="968:1064" ph="{...}" />
+            <marker date="1485325162576" expanded="true" signature="1084:1191" ph="/// Get the Rectangle ... " />
+            <marker date="1485325162576" expanded="true" signature="1231:1351" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MonoGame/MonoHelper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="54" lean-forward="false" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+          <folding>
+            <marker date="1485325190574" expanded="true" signature="6:70" ph="..." />
+            <marker date="1485325190574" expanded="true" signature="99:981" ph="{...}" />
+            <marker date="1485325190574" expanded="true" signature="129:979" ph="{...}" />
+            <marker date="1485325190574" expanded="true" signature="430:652" ph="/// Setup MonoHelper for your MonoGame project ... " />
+            <marker date="1485325190574" expanded="true" signature="753:973" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Console/ColorWriter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+          <folding>
+            <marker date="1485325254458" expanded="true" signature="27:87" ph="..." />
+            <marker date="1485325254458" expanded="true" signature="115:2504" ph="{...}" />
+            <marker date="1485325254458" expanded="true" signature="146:2502" ph="{...}" />
+            <marker date="1485325254458" expanded="true" signature="424:480" ph="{...}" />
+            <marker date="1485325254458" expanded="true" signature="528:590" ph="{...}" />
+            <marker date="1485325254458" expanded="true" signature="651:737" ph="{...}" />
+            <marker date="1485325254458" expanded="true" signature="790:877" ph="{...}" />
+            <marker date="1485325254458" expanded="true" signature="911:981" ph="{...}" />
+            <marker date="1485325254458" expanded="true" signature="1047:1158" ph="{...}" />
+            <marker date="1485325254458" expanded="true" signature="1204:1306" ph="{...}" />
+            <marker date="1485325254458" expanded="true" signature="1335:1763" ph="{...}" />
+            <marker date="1485325254458" expanded="true" signature="1457:1648" ph="{...}" />
+            <marker date="1485325254458" expanded="true" signature="1796:1877" ph="{...}" />
+            <marker date="1485325254458" expanded="true" signature="1908:1985" ph="{...}" />
+            <marker date="1485325254458" expanded="true" signature="2038:2154" ph="{...}" />
+            <marker date="1485325254458" expanded="true" signature="2227:2495" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MonoGame/Utils.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1484942579353" expanded="true" signature="6:70" ph="..." />
+            <marker date="1484942579353" expanded="true" signature="99:847" ph="{...}" />
+            <marker date="1484942579353" expanded="true" signature="106:170" ph="/// Misc class of Utilities ... " />
+            <marker date="1484942579353" expanded="true" signature="193:845" ph="{...}" />
+            <marker date="1484942579353" expanded="true" signature="208:472" ph="/// Get a vector to center the given text within the rectangle ... " />
+            <marker date="1484942579353" expanded="true" signature="564:839" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Misc/StringUtils.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding>
+            <marker date="1485325317111" expanded="true" signature="44:453" ph="{...}" />
+            <marker date="1485325317111" expanded="true" signature="83:451" ph="{...}" />
+            <marker date="1485325317111" expanded="true" signature="99:258" ph="/// Check if the word contains any letters ... " />
+            <marker date="1485325317111" expanded="true" signature="318:444" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MonoGame/Graphics/Drawer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="62" lean-forward="true" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+          <folding>
+            <marker date="1485326023841" expanded="true" signature="6:70" ph="..." />
+            <marker date="1485326023841" expanded="true" signature="108:1278" ph="{...}" />
+            <marker date="1485326023841" expanded="true" signature="134:1276" ph="{...}" />
+            <marker date="1485326023841" expanded="true" signature="150:451" ph="/// Draw a rectangle with a public  ... " />
+            <marker date="1485326023841" expanded="true" signature="526:738" ph="{...}" />
+            <marker date="1485326023841" expanded="true" signature="779:968" ph="/// Draw a rectangle with a texture for just this instance ... " />
+            <marker date="1485326023841" expanded="true" signature="1037:1270" ph="{...}" />
           </folding>
         </state>
       </provider>

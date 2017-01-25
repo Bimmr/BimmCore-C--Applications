@@ -1,45 +1,41 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Linq;
+using BimmCore.MonoGame.Graphics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using BimmCore.MonoGame.Graphics;
 
 namespace BimmCore.MonoGame.Components
 {
     /// <summary>
     /// Button, Don't forget to call the .Draw and .Update
     /// </summary>
-    public class Button : DrawableGameComponent
+    public class Button
     {
+        private Action<Button, MouseState> onClick;
+        private Action<Button, MouseState> onNotClick;
+        private Action<Button, MouseState> onHover;
+        private Action<Button, MouseState> onNotHover;
 
-        public Action<Button, MouseState> OnClick;
-        public Action<Button, MouseState> OnNotClick;
-        public Action<Button, MouseState> OnHover;
-        public Action<Button, MouseState> OnNotHover;
+        private Action<GameTime> beforeUpdate, afterUpdate;
+        private Action<GameTime, SpriteBatch> beforeDraw, afterDraw;
 
-        public Action<GameTime> BeforeUpdate, AfterUpdate;
-        public Action<GameTime, SpriteBatch> BeforeDraw, AfterDraw;
+        private bool centerText = true;
+        private string[] text;
 
-        public bool CenterText = true;
-        public string[] Text;
+        private Rectangle size;
+        private Sprite sprite;
+        private Color boxColor;
 
-        public Rectangle Size;
-        private Sprite _sprite;
-        private Color _boxColor;
-
-        private SpriteFont _spriteFont;
-        private Color _textColor;
+        private SpriteFont spriteFont;
+        private Color textColor;
 
         /// <summary>
         /// Pointless default constructor
         /// </summary>
         /// <param name="size"></param>
         public Button(Rectangle size)
-            : base(MonoHelper.Game)
         {
-            Size = size;
+            this.size = size;
         }
 
         /// <summary>
@@ -49,7 +45,7 @@ namespace BimmCore.MonoGame.Components
         /// <returns></returns>
         public Button setSprite(Sprite sprite)
         {
-            this._sprite = sprite;
+            this.sprite = sprite;
             return this;
         }
 
@@ -60,7 +56,7 @@ namespace BimmCore.MonoGame.Components
         /// <returns></returns>
         public Button setBoxColor(Color color)
         {
-            this._boxColor = color;
+            boxColor = color;
             return this;
         }
 
@@ -71,7 +67,7 @@ namespace BimmCore.MonoGame.Components
         /// <returns></returns>
         public Button setSpriteFont(SpriteFont spriteFont)
         {
-            this._spriteFont = spriteFont;
+            this.spriteFont = spriteFont;
             return this;
         }
 
@@ -80,19 +76,20 @@ namespace BimmCore.MonoGame.Components
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
-        public Button setText(String[] text)
+        public Button setText(string[] text)
         {
-            this.Text = text;
+            this.text = text;
             return this;
         }
+
         /// <summary>
         /// Set Text
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
-        public Button setText(String text)
+        public Button setText(string text)
         {
-            this.Text = new[] { text };
+            this.text = new[] {text};
             return this;
         }
 
@@ -103,7 +100,7 @@ namespace BimmCore.MonoGame.Components
         /// <returns></returns>
         public Button setTextColor(Color color)
         {
-            this._textColor = color;
+            textColor = color;
             return this;
         }
 
@@ -114,7 +111,7 @@ namespace BimmCore.MonoGame.Components
         /// <returns></returns>
         public Button setClickEvent(Action<Button, MouseState> clickEvent)
         {
-            this.OnClick = clickEvent;
+            onClick = clickEvent;
             return this;
         }
 
@@ -125,9 +122,10 @@ namespace BimmCore.MonoGame.Components
         /// <returns></returns>
         public Button setNotClickEvent(Action<Button, MouseState> notClickEvent)
         {
-            this.OnNotClick = notClickEvent;
+            onNotClick = notClickEvent;
             return this;
         }
+
         /// <summary>
         /// Set onHover Event
         /// </summary>
@@ -135,9 +133,83 @@ namespace BimmCore.MonoGame.Components
         /// <returns></returns>
         public Button setHoverEvent(Action<Button, MouseState> hoverEvent)
         {
-            this.OnHover = hoverEvent;
+            onHover = hoverEvent;
             return this;
         }
+
+        /// <summary>
+        /// Set the before draw action
+        /// </summary>
+        /// <param name="beforeEvent"></param>
+        /// <returns></returns>
+        public Button setBeforeDraw(Action<GameTime, SpriteBatch> beforeEvent)
+        {
+            beforeDraw = beforeEvent;
+            return this;
+        }
+
+        /// <summary>
+        /// Set the AfterDraw Action
+        /// </summary>
+        /// <param name="afterEvent"></param>
+        /// <returns></returns>
+        public Button setAftereDraw(Action<GameTime, SpriteBatch> afterEvent)
+        {
+            afterDraw = afterEvent;
+            return this;
+        }
+
+        /// <summary>
+        /// Set the Before Update Action
+        /// </summary>
+        /// <param name="updateEvent"></param>
+        /// <returns></returns>
+        public Button setBeforeUpdate(Action<GameTime> updateEvent)
+        {
+            beforeUpdate = updateEvent;
+            return this;
+        }
+
+        /// <summary>
+        /// Set the After update action
+        /// </summary>
+        /// <param name="updateEvent"></param>
+        /// <returns></returns>
+        public Button setAfterUpdate(Action<GameTime> updateEvent)
+        {
+            afterUpdate = updateEvent;
+            return this;
+        }
+
+        /// <summary>
+        /// Set if the text is centered
+        /// </summary>
+        /// <param name="center"></param>
+        /// <returns></returns>
+        public Button setCenterText(bool center)
+        {
+            centerText = center;
+            return this;
+        }
+
+        /// <summary>
+        /// Get the AfterDraw event
+        /// </summary>
+        /// <returns></returns>
+        public Action<GameTime, SpriteBatch> getAfterDraw()
+        {
+            return afterDraw;
+        }
+
+        /// <summary>
+        /// Get the size
+        /// </summary>
+        /// <returns></returns>
+        public Rectangle getSize()
+        {
+            return size;
+        }
+
         /// <summary>
         /// Set onNotHover Event
         /// </summary>
@@ -145,56 +217,61 @@ namespace BimmCore.MonoGame.Components
         /// <returns></returns>
         public Button setNotHoverEvent(Action<Button, MouseState> notHoverEvent)
         {
-            this.OnNotHover = notHoverEvent;
+            onNotHover = notHoverEvent;
             return this;
         }
 
 
-        public override void Draw(GameTime gameTime)
+        /// <summary>
+        /// Draw the Button
+        /// </summary>
+        /// <param name="gameTime"></param>
+        public void Draw(GameTime gameTime)
         {
-
             SpriteBatch sp = MonoHelper.SpriteBatch;
 
-            BeforeDraw?.Invoke(gameTime, sp);
-            if (_sprite != null)
-                _sprite.draw(sp, new Vector2(Size.X, Size.Y));
+            beforeDraw?.Invoke(gameTime, sp);
+            if (sprite != null)
+                sprite.draw(sp, new Vector2(size.X, size.Y));
             else
-                Drawer.drawRectangle(Size, _boxColor);
+                Drawer.drawRectangle(size, boxColor);
 
-            if (Text != null)
+            if (text != null)
             {
-                for (int i = 0; i< Text.Length; i++)
+                for (int i = 0; i < text.Length; i++)
                 {
-                    string line = Text[i];
+                    string line = text[i];
 
-                    int y =Size.Y+i * (Size.Height / Text.Length);
+                    int y = size.Y + i * (size.Height / text.Length);
 
-                    sp.DrawString(_spriteFont, line,
-                        CenterText
-                            ? Utils.centerText(_spriteFont, line, Size)
-                            : new Vector2(Size.X + (_sprite?.getWidth() ?? 0), y +(_sprite?.getHeight()/10 ?? 0)), _textColor);
+                    sp.DrawString(spriteFont, line,
+                        centerText
+                            ? Utils.centerText(spriteFont, line, size)
+                            : new Vector2(size.X + (sprite?.getWidth() ?? 0), y + (sprite?.getHeight() / 10 ?? 0)),
+                        textColor);
                 }
             }
-            AfterDraw?.Invoke(gameTime, sp);
-            base.Draw(gameTime);
+            afterDraw?.Invoke(gameTime, sp);
         }
 
 
-        public override void Update(GameTime gameTime)
+        /// <summary>
+        /// Update the button
+        /// </summary>
+        /// <param name="gameTime"></param>
+        public void Update(GameTime gameTime)
         {
-            BeforeUpdate?.Invoke(gameTime);
+            beforeUpdate?.Invoke(gameTime);
             Point mousePos = Mouse.GetState().Position;
-            if (Size.Contains(mousePos))
-                OnHover?.Invoke(this, Mouse.GetState());
+            if (size.Contains(mousePos))
+                onHover?.Invoke(this, Mouse.GetState());
             else
-                OnNotHover?.Invoke(this, Mouse.GetState());
-            if (Size.Contains(mousePos) && Mouse.GetState().LeftButton == ButtonState.Pressed)
-                OnClick?.Invoke(this, Mouse.GetState());
+                onNotHover?.Invoke(this, Mouse.GetState());
+            if (size.Contains(mousePos) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+                onClick?.Invoke(this, Mouse.GetState());
             else
-                OnNotClick?.Invoke(this, Mouse.GetState());
-            AfterUpdate?.Invoke(gameTime);
-
-            base.Update(gameTime);
+                onNotClick?.Invoke(this, Mouse.GetState());
+            afterUpdate?.Invoke(gameTime);
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-using System.Runtime.InteropServices;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace BimmCore.MonoGame.Graphics
@@ -81,22 +79,41 @@ namespace BimmCore.MonoGame.Graphics
             draw(spriteBatch, location, Source, opacity);
         }
 
+        /// <summary>
+        /// Draw the sprite with a source
+        /// </summary>
+        /// <param name="spriteBatch"></param>
+        /// <param name="location"></param>
+        /// <param name="source"></param>
+        /// <param name="opacity"></param>
         public void draw(SpriteBatch spriteBatch, Vector2 location, Rectangle source, float opacity)
         {
             Rectangle loc = new Rectangle((int) location.X, (int) location.Y, getWidth(), getHeight());
             spriteBatch.Draw(Texture, loc, source, Color.White * opacity);
         }
 
+        /// <summary>
+        /// Get the width of the sprite
+        /// </summary>
+        /// <returns></returns>
         public int getWidth()
         {
             return Source != Rectangle.Empty ? Source.Width : FrameHelper.Width;
         }
 
+        /// <summary>
+        /// Get the Height of the sprite
+        /// </summary>
+        /// <returns></returns>
         public int getHeight()
         {
             return Source != Rectangle.Empty ? Source.Height : FrameHelper.Height;
         }
 
+        /// <summary>
+        /// Get the size of the sprite
+        /// </summary>
+        /// <returns></returns>
         public Vector2 getSize()
         {
             return new Vector2(getWidth(), getHeight());

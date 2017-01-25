@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Reflection;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using BimmCore.MonoGame.Components;
 using BimmCore.MonoGame.Graphics;
 
 namespace BimmCore.MonoGame.Components
 {
-    public class Menu : DrawableGameComponent
+    public class Menu
     {
         public static Rectangle Size = new Rectangle(0, 0, 200, 50);
         public static int Spacing = 5;
@@ -24,10 +21,9 @@ namespace BimmCore.MonoGame.Components
         public List<Button> Buttons;
 
         public SpriteFont SpriteFont;
-        
 
 
-        public Menu(Vector2 location, SpriteFont font) : base(MonoHelper.Game)
+        public Menu(Vector2 location, SpriteFont font)
         {
             SpriteFont = font;
             Location = location;
@@ -41,25 +37,21 @@ namespace BimmCore.MonoGame.Components
             FontColor = fontColor;
         }
 
-        public override void Update(GameTime gameTime)
+        public void Update(GameTime gameTime)
         {
             foreach (Button btn in Buttons)
                 btn.Update(gameTime);
-
-            base.Update(gameTime);
         }
 
-        public override void Draw(GameTime gameTime)
+        public void Draw(GameTime gameTime)
         {
             foreach (Button btn in Buttons)
                 btn.Draw(gameTime);
-
-            base.Draw(gameTime);
         }
 
-        public void addOption(string text, Sprite sprite, Action<Button,MouseState>onClick)
+        public void addOption(string text, Sprite sprite, Action<Button, MouseState>onClick)
         {
-            addOption(new []{text}, sprite, onClick );
+            addOption(new[] {text}, sprite, onClick);
         }
 
         public void addOption(string[] text, Sprite sprite, Action<Button, MouseState> onClick)
@@ -71,41 +63,44 @@ namespace BimmCore.MonoGame.Components
 
             Button btn = new Button(rec)
                 .setSprite(sprite)
-                .setSpriteFont(SpriteFont).setText(text).setTextColor( FontColor)
+                .setSpriteFont(SpriteFont)
+                .setText(text)
+                .setTextColor(FontColor)
                 .setBoxColor(ButtonColor)
                 .setClickEvent(onClick);
 
             if (sprite != null)
-                btn.CenterText = false;
+                btn.setCenterText(false);
 
             if (ButtonColor != Color.Transparent)
             {
-                btn.BeforeDraw = (time, batch) =>
+                btn.setBeforeDraw((time, batch) =>
                 {
-                    Drawer.drawRectangle(new Rectangle(rec.X - 1, rec.Y - 1, rec.Width + 1, rec.Height + 1), Color.Black);
+                    Drawer.drawRectangle(new Rectangle(rec.X - 1, rec.Y - 1, rec.Width + 1, rec.Height + 1),
+                        Color.Black);
                     Drawer.drawRectangle(rec, ButtonColor);
-                };
+                });
             }
             Action<Button, MouseState> hover =
                 (button, state) =>
                 {
-                    button.AfterDraw = (time, batch) =>
+                    button.setAftereDraw((time, batch) =>
                     {
                         if (ButtonColor != Color.Transparent)
                             Drawer.drawRectangle(rec, Color.White * .4f);
                         Selected = Buttons.Count;
-                    };
+                    });
                 };
             Action<Button, MouseState> notHover =
                 (button, state) =>
                 {
-                    if (button.AfterDraw != null) button.AfterDraw = null;
+                    if (button.getAfterDraw() != null) button.setAftereDraw(null);
                     if (Selected == Buttons.Count)
                         Selected = -1;
                 };
 
-            btn.OnHover = hover;
-            btn.OnNotHover = notHover;
+            btn.setHoverEvent(hover);
+            btn.setNotHoverEvent(notHover);
 
             Buttons.Add(btn);
         }
@@ -114,6 +109,5 @@ namespace BimmCore.MonoGame.Components
         {
             addOption(text, null, onClick);
         }
-        
     }
 }

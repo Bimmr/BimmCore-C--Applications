@@ -1,13 +1,4 @@
-﻿/*
- *
- * File Name: ColorWriter - BimmrUtilities
- * 
- * Description: Utilities class to make adding color to a console easier
- * 
- * Revisions:
- *          11/12/15 - Randy Bimm - Created Class
- * 
- */
+﻿//TODO: Add comments
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,15 +8,13 @@ namespace BimmCore.Console
     public class ColorWriter
     {
 
-        private Dictionary<int, String> texts = new Dictionary<int, string>();
+        private Dictionary<int, string> texts = new Dictionary<int, string>();
         private Dictionary<int, ConsoleColor> textsColor = new Dictionary<int, ConsoleColor>();
 
-        private int place = 0;
-        private Boolean save;
+        private int place;
+        private bool save;
 
-        public ColorWriter() { }
-
-        public ColorWriter(String text)
+        public ColorWriter(string text)
         {
             texts.Add(place, text);
         }
@@ -35,7 +24,7 @@ namespace BimmCore.Console
             textsColor.Add(place, color);
         }
 
-        public ColorWriter(ConsoleColor color, String text)
+        public ColorWriter(ConsoleColor color, string text)
         {
             textsColor.Add(place, color);
             Next(text);
@@ -48,18 +37,18 @@ namespace BimmCore.Console
         }
         public ColorWriter Save()
         {
-            this.save = true;
+            save = true;
             return this;
         }
 
-        public ColorWriter Next(ConsoleColor color, String text)
+        public ColorWriter Next(ConsoleColor color, string text)
         {
             textsColor.Add(place, color);
             Next(text);
             return this;
         }
 
-        public ColorWriter Next(String text)
+        public ColorWriter Next(string text)
         {
             texts.Add(place, text);
             place++;

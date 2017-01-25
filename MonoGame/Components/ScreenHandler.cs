@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace BimmCore.MonoGame.Components
 {
@@ -48,7 +44,7 @@ namespace BimmCore.MonoGame.Components
         /// <param name="screen"></param>
         public void remove(Screen screen)
         {
-            Dictionary<string, Screen> s2 = new Dictionary<string, Screen> (screens);
+            Dictionary<string, Screen> s2 = new Dictionary<string, Screen>(screens);
             foreach (KeyValuePair<string, Screen> entry in s2)
             {
                 if (entry.Value == screen)
@@ -72,8 +68,7 @@ namespace BimmCore.MonoGame.Components
         public void show(string name)
         {
             Screen screen = getScreen(name);
-            if (current != null)
-                current.hide();
+            current?.hide();
 
             last = current;
 

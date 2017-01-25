@@ -14,9 +14,9 @@ namespace BimmCore.MonoGame.Graphics
         public List<Rectangle> Frames;
         public int Width, Height;
 
-        private bool _loop;
-        private int _startX, _startY;
-        private int _row, _col;
+        private bool loop;
+        private int startX, startY;
+        private int row, col;
 
         /// <summary>
         /// Create a framed texture
@@ -29,12 +29,12 @@ namespace BimmCore.MonoGame.Graphics
         public FrameHelper(int startX, int startY, int width, int height, int row, int col)
         {
             SelectedFrame = -1;
-            _startX = startX;
-            _startY = startY;
+            this.startX = startX;
+            this.startY = startY;
             Width = width;
             Height = height;
-            _row = row;
-            _col = col;
+            this.row = row;
+            this.col = col;
 
             createFrames();
         }
@@ -42,7 +42,7 @@ namespace BimmCore.MonoGame.Graphics
         public FrameHelper(int startX, int startY, int width, int height, int row, int col, bool loop)
             : this(startX, startY, width, height, row, col)
         {
-            _loop = loop;
+            this.loop = loop;
         }
 
         /// <summary>
@@ -51,12 +51,12 @@ namespace BimmCore.MonoGame.Graphics
         private void createFrames()
         {
             Frames = new List<Rectangle>();
-            for (int i = 0; i < _row; i++)
+            for (int i = 0; i < row; i++)
             {
-                for (int j = 0; j < _col; j++)
+                for (int j = 0; j < col; j++)
                 {
-                    int x = j * Width + _startX;
-                    int y = i * Height + _startY;
+                    int x = j * Width + startX;
+                    int y = i * Height + startY;
 
                     Frames.Add(new Rectangle(x, y, Width, Height));
                 }
@@ -71,7 +71,7 @@ namespace BimmCore.MonoGame.Graphics
         {
             if (SelectedFrame + 1 < Frames.Count)
                 SelectedFrame++;
-            else if (_loop)
+            else if (loop)
                 SelectedFrame = 0;
 
 

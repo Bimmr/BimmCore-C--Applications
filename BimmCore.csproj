@@ -43,8 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Console\ColorWriter.cs" />
-    <Compile Include="Console\StringUtils.cs" />
+    <Compile Include="Misc\Direction.cs" />
+    <Compile Include="Misc\StringUtils.cs" />
     <Compile Include="MonoGame\Components\Button.cs" />
+    <Compile Include="MonoGame\Components\Input.cs" />
     <Compile Include="MonoGame\Components\Menu.cs" />
     <Compile Include="MonoGame\Components\Notification.cs" />
     <Compile Include="MonoGame\Components\Screen.cs" />

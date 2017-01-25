@@ -1,4 +1,6 @@
-﻿using System;
+﻿//TODO: Redo file
+
+using System;
 using System.ComponentModel.Design;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -83,11 +85,11 @@ namespace BimmCore.MonoGame.Components
                     (b, s) =>
                     {
                         //Set the Draw action to draw the rectangle
-                        b.AfterDraw = (b2, s2) => { draw(b, s); };
+                        b.setAftereDraw((b2, s2) => { draw(b, s); });
                     }).setNotClickEvent((b, s) =>
                     {
-                        if (b.AfterDraw != null)
-                            b.AfterDraw = null;
+                        if (b.getAfterDraw() != null)
+                            b.setAftereDraw(null);
                     }
             );
 

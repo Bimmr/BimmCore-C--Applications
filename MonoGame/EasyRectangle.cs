@@ -8,8 +8,8 @@ namespace BimmCore.MonoGame
     /// </summary>
     public class EasyRectangle
     {
-        private Vector2 _p1;
-        private Vector2 _p2;
+        private Vector2 p1;
+        private Vector2 p2;
 
         /// <summary>
         /// Create the rectangle
@@ -20,23 +20,23 @@ namespace BimmCore.MonoGame
         {
             if (p1.X < p2.X)
             {
-                _p1.X = p1.X;
-                _p2.X = p2.X;
+                this.p1.X = p1.X;
+                this.p2.X = p2.X;
             }
             else
             {
-                _p2.X = p1.X;
-                _p1.X = p2.X;
+                this.p2.X = p1.X;
+                this.p1.X = p2.X;
             }
             if (p1.Y < p2.Y)
             {
-                _p1.Y = p1.Y;
-                _p2.Y = p2.Y;
+                this.p1.Y = p1.Y;
+                this.p2.Y = p2.Y;
             }
             else
             {
-                _p2.Y = p1.Y;
-                _p1.Y = p2.Y;
+                this.p2.Y = p1.Y;
+                this.p1.Y = p2.Y;
             }
         }
 
@@ -46,7 +46,7 @@ namespace BimmCore.MonoGame
         /// <returns>Rectangle</returns>
         public Rectangle getRectangle()
         {
-            return new Rectangle((int)_p1.X, (int)_p1.Y, (int)(_p2.X - _p1.X), (int)(_p2.Y - _p1.Y));
+            return new Rectangle((int) p1.X, (int) p1.Y, (int) (p2.X - p1.X), (int) (p2.Y - p1.Y));
         }
     }
 }

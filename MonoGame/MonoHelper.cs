@@ -1,10 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BimmCore.MonoGame
 {
@@ -18,12 +13,18 @@ namespace BimmCore.MonoGame
         //Middle point of the window
         public static Vector2 Middle => new Vector2(Size.X / 2, Size.Y / 2);
 
+        /// <summary>
+        /// Setup MonoHelper for your MonoGame project
+        /// </summary>
+        /// <param name="game"></param>
+        /// <param name="spriteBatch"></param>
+        /// <param name="graphics"></param>
         public static void setup(Game game, SpriteBatch spriteBatch, GraphicsDeviceManager graphics)
         {
-            MonoHelper.Game = game;
-            MonoHelper.SpriteBatch = spriteBatch;
-            MonoHelper.Graphics = graphics;
-            MonoHelper.Size = new Vector2(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
+            Game = game;
+            SpriteBatch = spriteBatch;
+            Graphics = graphics;
+            Size = new Vector2(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
         }
     }
 }

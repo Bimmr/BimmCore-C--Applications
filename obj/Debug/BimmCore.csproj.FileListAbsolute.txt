@@ -58,7 +58,6 @@ C:\Users\Randy\RiderProjects\BimmCore-C--Applications\bin\Debug\SharpDX.XInput.x
 C:\Users\Randy\RiderProjects\BimmCore-C--Applications\bin\Debug\SharpDX.MediaFoundation.xml
 C:\Users\Randy\RiderProjects\BimmCore-C--Applications\obj\Debug\BimmCore.dll
 C:\Users\Randy\RiderProjects\BimmCore-C--Applications\obj\Debug\BimmCore.pdb
-C:\Users\Randy\RiderProjects\BimmCore-C--Applications\obj\Debug\BimmCore.csprojResolveAssemblyReference.cache
 C:\Users\rbimm5674\Desktop\BimmCore-C--Applications\obj\Debug\BimmCore.dll
 C:\Users\rbimm5674\Desktop\BimmCore-C--Applications\obj\Debug\BimmCore.pdb
 C:\Users\rbimm5674\Desktop\BimmCore-C--Applications\bin\Debug\BimmCore.dll
@@ -79,3 +78,4 @@ C:\Users\rbimm5674\Desktop\BimmCore-C--Applications\bin\Debug\SharpDX.Direct3D11
 C:\Users\rbimm5674\Desktop\BimmCore-C--Applications\bin\Debug\SharpDX.Direct2D1.xml
 C:\Users\rbimm5674\Desktop\BimmCore-C--Applications\bin\Debug\SharpDX.XInput.xml
 C:\Users\rbimm5674\Desktop\BimmCore-C--Applications\bin\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Randy\RiderProjects\BimmCore-C--Applications\obj\Debug\BimmCore.csprojResolveAssemblyReference.cache

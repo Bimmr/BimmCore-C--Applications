@@ -13,17 +13,11 @@ namespace BimmCore.MonoGame.Components
         public KeyboardState LastKeyBoardState;
         public MouseState MouseState;
         public MouseState LastMouseState;
-        
+
         public List<GameComponent> Components;
 
         public ScreenHandler screenHandler;
-        public SpriteBatch SpriteBatch
-        {
-            get
-            {
-                return MonoHelper.SpriteBatch;
-            }
-        }
+        public SpriteBatch SpriteBatch => MonoHelper.SpriteBatch;
 
         /// <summary>
         /// Constructor for the screen
@@ -72,7 +66,7 @@ namespace BimmCore.MonoGame.Components
 
             base.Draw(gameTime);
         }
-        
+
         /// <summary>
         /// Update all components the screen has
         /// </summary>
@@ -113,7 +107,7 @@ namespace BimmCore.MonoGame.Components
         /// <returns></returns>
         public Notification showNotification(string title, string[] text, Action action, Sprite sprite = null)
         {
-            return new Notification(this, title, text, action, sprite, null,null,null);
+            return new Notification(this, title, text, action, sprite, null, null, null);
         }
     }
 }
