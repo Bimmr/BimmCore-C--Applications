@@ -36,7 +36,7 @@ namespace BimmCore.MonoGame.Components
 
             if (useButton)
             {
-                submitButton = new Button(new Rectangle(500, size.Y, 75, size.Height)).setText("Submit")
+                submitButton = new Button(new Rectangle(size.Right, size.Y, 75, size.Height)).setText("Submit")
                     .setTextColor(Color.Black)
                     .setBoxColor(Color.Gray)
                     .setHoverEvent((b, s) => b.setBoxColor(Color.LightGray))
@@ -164,8 +164,8 @@ namespace BimmCore.MonoGame.Components
             else if (editing && (!size.Contains(Mouse.GetState().Position) &&
                                  Mouse.GetState().LeftButton == ButtonState.Pressed))
                 editing = false;
-
-            keyListener.update();
+            if(editing)
+                keyListener.update();
            
         }
 

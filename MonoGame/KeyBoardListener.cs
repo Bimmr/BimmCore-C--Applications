@@ -25,14 +25,16 @@ namespace BimmCore.MonoGame
             KeyboardState currentState = Keyboard.GetState();
             Keys[] pressedKeys = currentState.GetPressedKeys();
 
-            foreach (Keys key in pressedKeys)
-                if (!lastPressedKeys.Contains(key))
-                    keyDown?.Invoke(key);
+            if (lastPressedKeys != null)
+            {
+                foreach (Keys key in pressedKeys)
+                    if (!lastPressedKeys.Contains(key))
+                        keyDown?.Invoke(key);
 
-            foreach (Keys key in lastPressedKeys)
-                if (lastPressedKeys.Contains(key) && !pressedKeys.Contains(key))
-                    keyUp?.Invoke(key);
-
+                foreach (Keys key in lastPressedKeys)
+                    if (lastPressedKeys.Contains(key) && !pressedKeys.Contains(key))
+                        keyUp?.Invoke(key);
+            }
             lastPressedKeys = pressedKeys;
         }
 
