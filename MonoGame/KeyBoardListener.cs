@@ -1,9 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Input;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BimmCore.MonoGame
 {
@@ -14,7 +11,11 @@ namespace BimmCore.MonoGame
         private Action<Keys> keyDown;
         private Action<Keys> keyUp;
 
-
+        public KeyBoardListener(Action<Keys> keyDown, Action<Keys> keyUp)
+        {
+            this.keyDown = keyDown;
+            this.keyUp = keyUp;
+        }
         /// <summary>
         /// Update the Keyboard Listener
         /// </summary>

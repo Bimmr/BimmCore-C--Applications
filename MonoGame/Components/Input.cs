@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using BimmCore.MonoGame.Graphics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -9,7 +8,7 @@ namespace BimmCore.MonoGame.Components
 {
     public class Input
     {
-        private Keys[] lastPressedKeys;
+        private KeyBoardListener keyListener;
         private bool editing;
 
         private Button submitButton;
@@ -29,6 +28,12 @@ namespace BimmCore.MonoGame.Components
         public Input(Rectangle size, bool useButton)
         {
             this.size = size;
+            this.keyListener = new KeyBoardListener((k)=>
+            {
+                OnKeyDown(k);
+                onKeyType?.Invoke(this, k);
+            }, null);
+
             if (useButton)
             {
                 submitButton = new Button(new Rectangle(500, size.Y, 75, size.Height)).setText("Submit")
@@ -160,21 +165,8 @@ namespace BimmCore.MonoGame.Components
                                  Mouse.GetState().LeftButton == ButtonState.Pressed))
                 editing = false;
 
-
-            KeyboardState currentState = Keyboard.GetState();
-            if (editing)
-            {
-                Keys[] pressedKeys = currentState.GetPressedKeys();
-
-                foreach (Keys key in pressedKeys)
-                    if (!lastPressedKeys.Contains(key))
-                    {
-                        OnKeyDown(key);
-                        onKeyType?.Invoke(this, key);
-                    }
-
-                lastPressedKeys = pressedKeys;
-            }
+            keyListener.update();
+           
         }
 
         /// <summary>
