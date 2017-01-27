@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Console\ColorWriter.cs" />
     <Compile Include="Misc\Direction.cs" />
+    <Compile Include="Misc\FileHelper.cs" />
     <Compile Include="Misc\StringUtils.cs" />
     <Compile Include="MonoGame\Components\Button.cs" />
     <Compile Include="MonoGame\Components\Input.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="MonoGame\Graphics\FrameHelper.cs" />
     <Compile Include="MonoGame\Graphics\ScrollingBackground.cs" />
     <Compile Include="MonoGame\Graphics\Sprite.cs" />
+    <Compile Include="MonoGame\KeyBoardListener.cs" />
     <Compile Include="MonoGame\MonoHelper.cs" />
     <Compile Include="MonoGame\Utils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

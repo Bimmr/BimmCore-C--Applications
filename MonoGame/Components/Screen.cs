@@ -73,17 +73,20 @@ namespace BimmCore.MonoGame.Components
         /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
-            KeyboardState = Keyboard.GetState();
-            MouseState = Mouse.GetState();
-            var comps = new List<GameComponent>(Components);
-            foreach (GameComponent item in comps)
-                if (item.Enabled)
-                    item.Update(gameTime);
+            if (MonoHelper.Game.IsActive)
+            {
+                KeyboardState = Keyboard.GetState();
+                MouseState = Mouse.GetState();
+                var comps = new List<GameComponent>(Components);
+                foreach (GameComponent item in comps)
+                    if (item.Enabled)
+                        item.Update(gameTime);
 
-            base.Update(gameTime);
+                base.Update(gameTime);
 
-            LastMouseState = MouseState;
-            LastKeyBoardState = KeyboardState;
+                LastMouseState = MouseState;
+                LastKeyBoardState = KeyboardState;
+            }
         }
 
         /// <summary>

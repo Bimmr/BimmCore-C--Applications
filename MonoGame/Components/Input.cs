@@ -150,30 +150,33 @@ namespace BimmCore.MonoGame.Components
         /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {
-            submitButton?.Update(gameTime);
-
-            if (size.Contains(Mouse.GetState().Position) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+            if (MonoHelper.Game.IsActive)
             {
-                editing = true;
-            }
-            else if (editing && (!size.Contains(Mouse.GetState().Position) &&
-                                 Mouse.GetState().LeftButton == ButtonState.Pressed))
-                editing = false;
+                submitButton?.Update(gameTime);
+
+                if (size.Contains(Mouse.GetState().Position) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+                {
+                    editing = true;
+                }
+                else if (editing && (!size.Contains(Mouse.GetState().Position) &&
+                                     Mouse.GetState().LeftButton == ButtonState.Pressed))
+                    editing = false;
 
 
-            KeyboardState currentState = Keyboard.GetState();
-            if (editing)
-            {
-                Keys[] pressedKeys = currentState.GetPressedKeys();
+                KeyboardState currentState = Keyboard.GetState();
+                if (editing)
+                {
+                    Keys[] pressedKeys = currentState.GetPressedKeys();
 
-                foreach (Keys key in pressedKeys)
-                    if (!lastPressedKeys.Contains(key))
-                    {
-                        OnKeyDown(key);
-                        onKeyType?.Invoke(this, key);
-                    }
+                    foreach (Keys key in pressedKeys)
+                        if (!lastPressedKeys.Contains(key))
+                        {
+                            OnKeyDown(key);
+                            onKeyType?.Invoke(this, key);
+                        }
 
-                lastPressedKeys = pressedKeys;
+                    lastPressedKeys = pressedKeys;
+                }
             }
         }
 

@@ -261,17 +261,20 @@ namespace BimmCore.MonoGame.Components
         /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {
-            beforeUpdate?.Invoke(gameTime);
-            Point mousePos = Mouse.GetState().Position;
-            if (size.Contains(mousePos))
-                onHover?.Invoke(this, Mouse.GetState());
-            else
-                onNotHover?.Invoke(this, Mouse.GetState());
-            if (size.Contains(mousePos) && Mouse.GetState().LeftButton == ButtonState.Pressed)
-                onClick?.Invoke(this, Mouse.GetState());
-            else
-                onNotClick?.Invoke(this, Mouse.GetState());
-            afterUpdate?.Invoke(gameTime);
+            if (MonoHelper.Game.IsActive)
+            {
+                beforeUpdate?.Invoke(gameTime);
+                Point mousePos = Mouse.GetState().Position;
+                if (size.Contains(mousePos))
+                    onHover?.Invoke(this, Mouse.GetState());
+                else
+                    onNotHover?.Invoke(this, Mouse.GetState());
+                if (size.Contains(mousePos) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+                    onClick?.Invoke(this, Mouse.GetState());
+                else
+                    onNotClick?.Invoke(this, Mouse.GetState());
+                afterUpdate?.Invoke(gameTime);
+            }
         }
     }
 }
