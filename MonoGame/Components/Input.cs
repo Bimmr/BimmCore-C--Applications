@@ -129,16 +129,16 @@ namespace BimmCore.MonoGame.Components
 
             if (editing)
             {
-                Drawer.drawRectangle(size, Color.Black * .5f);
+                Drawer.drawRectangle(size, Color.Black * .35f);
                 int currentLetterPos = (int) (size.X + textFont.MeasureString(text).X);
-                Drawer.drawRectangle(new Rectangle(currentLetterPos, size.Y + 5, 2, size.Height - 10), Color.Black);
+                Drawer.drawRectangle(new Rectangle(currentLetterPos+1, size.Y + 5, 2, size.Height - 10), Color.Black);
             }
             if (text != null || text == "")
                 MonoHelper.SpriteBatch.DrawString(textFont, text,
-                    new Vector2(size.X, Utils.centerText(textFont, text, size).Y), textColor);
+                    new Vector2(size.X+1, Utils.centerText(textFont, text, size).Y), textColor);
             else
                 MonoHelper.SpriteBatch.DrawString(textFont, previewText,
-                    new Vector2(size.X, Utils.centerText(textFont, previewText, size).Y), previewTextColor);
+                    new Vector2(size.X+1, Utils.centerText(textFont, previewText, size).Y), previewTextColor);
 
             if (submitButton != null)
             {

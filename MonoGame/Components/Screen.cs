@@ -9,10 +9,10 @@ namespace BimmCore.MonoGame.Components
 {
     public abstract class Screen : DrawableGameComponent
     {
-        public KeyboardState KeyboardState;
-        public KeyboardState LastKeyBoardState;
-        public MouseState MouseState;
-        public MouseState LastMouseState;
+        public MouseState LastMouseState { get { return screenHandler.lastMouseState; } }
+        public KeyboardState LastKeyboardState { get { return screenHandler.lastKeyboardState; } }
+        public MouseState CurMouseState { get { return screenHandler.curMouseState; } }
+        public KeyboardState CurKeyboardState { get { return screenHandler.curKeyboardState; } }
 
         public List<GameComponent> Components;
 
@@ -73,17 +73,12 @@ namespace BimmCore.MonoGame.Components
         /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
-                KeyboardState = Keyboard.GetState();
-                MouseState = Mouse.GetState();
                 var comps = new List<GameComponent>(Components);
                 foreach (GameComponent item in comps)
                     if (item.Enabled)
                         item.Update(gameTime);
 
                 base.Update(gameTime);
-
-                LastMouseState = MouseState;
-                LastKeyBoardState = KeyboardState;
         }
 
         /// <summary>

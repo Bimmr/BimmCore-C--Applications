@@ -1,13 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 
 namespace BimmCore.MonoGame.Components
 {
-    public class ScreenHandler
+    public class ScreenHandler : GameComponent
     {
         private Dictionary<string, Screen> screens;
         private Screen last, current;
 
-        public ScreenHandler()
+        public KeyboardState curKeyboardState, lastKeyboardState;
+        public MouseState curMouseState, lastMouseState;
+
+        public ScreenHandler() : base(MonoHelper.Game)
         {
             screens = new Dictionary<string, Screen>();
         }
@@ -92,6 +97,16 @@ namespace BimmCore.MonoGame.Components
         public Screen getCurrent()
         {
             return current;
+        }
+        public override void Update(GameTime gameTime)
+        {
+            curMouseState = Mouse.GetState();
+            curKeyboardState = Keyboard.GetState();
+
+            current.Update(gameTime);
+
+            lastMouseState = curMouseState;
+            lastKeyboardState = curKeyboardState;
         }
     }
 }

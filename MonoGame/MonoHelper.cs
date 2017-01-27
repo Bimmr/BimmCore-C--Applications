@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace BimmCore.MonoGame
 {
@@ -14,7 +15,7 @@ namespace BimmCore.MonoGame
         public static Vector2 Middle => new Vector2(Size.X / 2, Size.Y / 2);
 
         /// <summary>
-        /// Setup MonoHelper for your MonoGame project
+        /// Setup MonoHelper for your MonoGame project.
         /// </summary>
         /// <param name="game"></param>
         /// <param name="spriteBatch"></param>
