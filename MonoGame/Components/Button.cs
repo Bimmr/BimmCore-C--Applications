@@ -261,8 +261,6 @@ namespace BimmCore.MonoGame.Components
         /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {
-            if (MonoHelper.Game.IsActive)
-            {
                 beforeUpdate?.Invoke(gameTime);
                 Point mousePos = Mouse.GetState().Position;
                 if (size.Contains(mousePos))
@@ -274,7 +272,7 @@ namespace BimmCore.MonoGame.Components
                 else
                     onNotClick?.Invoke(this, Mouse.GetState());
                 afterUpdate?.Invoke(gameTime);
-            }
+            
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using BimmCore.MonoGame.Graphics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -9,7 +8,7 @@ namespace BimmCore.MonoGame.Components
 {
     public class Input
     {
-        private Keys[] lastPressedKeys;
+        private KeyBoardListener keyListener;
         private bool editing;
 
         private Button submitButton;
@@ -29,9 +28,15 @@ namespace BimmCore.MonoGame.Components
         public Input(Rectangle size, bool useButton)
         {
             this.size = size;
+            this.keyListener = new KeyBoardListener((k)=>
+            {
+                OnKeyDown(k);
+                onKeyType?.Invoke(this, k);
+            }, null);
+
             if (useButton)
             {
-                submitButton = new Button(new Rectangle(500, size.Y, 75, size.Height)).setText("Submit")
+                submitButton = new Button(new Rectangle(size.Right, size.Y, 75, size.Height)).setText("Submit")
                     .setTextColor(Color.Black)
                     .setBoxColor(Color.Gray)
                     .setHoverEvent((b, s) => b.setBoxColor(Color.LightGray))
@@ -150,8 +155,6 @@ namespace BimmCore.MonoGame.Components
         /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {
-            if (MonoHelper.Game.IsActive)
-            {
                 submitButton?.Update(gameTime);
 
                 if (size.Contains(Mouse.GetState().Position) && Mouse.GetState().LeftButton == ButtonState.Pressed)
@@ -163,21 +166,18 @@ namespace BimmCore.MonoGame.Components
                     editing = false;
 
 
-                KeyboardState currentState = Keyboard.GetState();
-                if (editing)
+                submitButton?.Update(gameTime);
+
+                if (size.Contains(Mouse.GetState().Position) && Mouse.GetState().LeftButton == ButtonState.Pressed)
                 {
-                    Keys[] pressedKeys = currentState.GetPressedKeys();
-
-                    foreach (Keys key in pressedKeys)
-                        if (!lastPressedKeys.Contains(key))
-                        {
-                            OnKeyDown(key);
-                            onKeyType?.Invoke(this, key);
-                        }
-
-                    lastPressedKeys = pressedKeys;
+                    editing = true;
                 }
-            }
+                else if (editing && (!size.Contains(Mouse.GetState().Position) &&
+                                     Mouse.GetState().LeftButton == ButtonState.Pressed))
+                    editing = false;
+
+                if (editing)
+                    keyListener.update();
         }
 
         /// <summary>

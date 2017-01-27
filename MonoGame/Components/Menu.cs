@@ -39,11 +39,8 @@ namespace BimmCore.MonoGame.Components
 
         public void Update(GameTime gameTime)
         {
-            if (MonoHelper.Game.IsActive)
-            {
                 foreach (Button btn in Buttons)
                     btn.Update(gameTime);
-            }
         }
 
         public void Draw(GameTime gameTime)
