@@ -1,39 +1,34 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System.Collections.Generic;
 
 namespace BimmCore.MonoGame.Graphics
 {
-    public class Drawer
+    public static class Drawer
     {
 
-        /// <summary>
-        /// Draw a rectangle with a public texture
-        /// </summary>
-        /// <param name="rectangle">Contains x, y, width, height</param>
-        /// <param name="color">Color of the rectangle</param>
-        /// <param name="newTex">Create a new Texture for the drawing</param>
-        public static void drawRectangle(Rectangle rectangle, Color color)
-        {
-            Texture2D tex = new Texture2D(MonoHelper.Graphics.GraphicsDevice, 1, 1);
+        private static Dictionary<Color, Texture2D> texCache = new Dictionary<Color, Texture2D>();
 
-            tex.SetData(new[] { color });
-            MonoHelper.SpriteBatch.Draw(tex, rectangle, color);
-        }
-
-        private Texture2D tex;
         /// <summary>
         /// Draw a rectangle with a texture for just this instance
         /// </summary>
         /// <param name="rectangle"></param>
         /// <param name="color"></param>
-        public void drawRectangleP(Rectangle rectangle, Color color)
+        public static void drawRectangle(Rectangle rectangle, Color color)
         {
+            Texture2D tex;
 
-            if(tex == null)
+            if (texCache.ContainsKey(color))
+                tex = texCache[color];
+            else
+            {
                 tex = new Texture2D(MonoHelper.Graphics.GraphicsDevice, 1, 1);
+                texCache.Add(color, tex);
+            }
 
             tex.SetData(new[] {color});
             MonoHelper.SpriteBatch.Draw(tex, rectangle, color);
         }
+
     }
 }

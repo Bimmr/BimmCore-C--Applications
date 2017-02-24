@@ -273,5 +273,6 @@ namespace BimmCore.MonoGame.Components
                     onNotClick?.Invoke(this, Mouse.GetState());
                 afterUpdate?.Invoke(gameTime);  
         }
+
     }
 }

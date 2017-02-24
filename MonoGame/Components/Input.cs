@@ -24,6 +24,7 @@ namespace BimmCore.MonoGame.Components
 
         private Action<Input> onSubmit;
         private Action<Input, Keys> onKeyType;
+        
 
         public Input(Rectangle size, bool useButton)
         {
@@ -129,7 +130,7 @@ namespace BimmCore.MonoGame.Components
 
             if (editing)
             {
-                Drawer.drawRectangle(size, Color.Black * .35f);
+                Drawer.drawRectangle(size, Color.Black * .5f);
                 int currentLetterPos = (int) (size.X + textFont.MeasureString(text).X);
                 Drawer.drawRectangle(new Rectangle(currentLetterPos+1, size.Y + 5, 2, size.Height - 10), Color.Black);
             }

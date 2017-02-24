@@ -17,6 +17,8 @@ namespace BimmCore.MonoGame.Components
         public List<GameComponent> Components;
 
         public ScreenHandler screenHandler;
+        
+
         public SpriteBatch SpriteBatch => MonoHelper.SpriteBatch;
 
         /// <summary>
