@@ -37,6 +37,5 @@ namespace BimmCore.MonoGame
             }
             lastPressedKeys = pressedKeys;
         }
-
     }
 }

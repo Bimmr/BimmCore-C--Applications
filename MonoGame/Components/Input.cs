@@ -6,10 +6,12 @@ using Microsoft.Xna.Framework.Input;
 
 namespace BimmCore.MonoGame.Components
 {
+    public enum InputFilter { ALL, LETTER, NUMBER}
     public class Input
     {
         private KeyBoardListener keyListener;
         private bool editing;
+        private InputFilter inputFilter = InputFilter.ALL;
 
         private Button submitButton;
         private Rectangle size;
@@ -44,6 +46,17 @@ namespace BimmCore.MonoGame.Components
                     .setNotHoverEvent((b, s) => { b.setBoxColor(Color.Gray); });
                 submitButton?.setClickEvent((b, s) => submit());
             }
+        }
+
+        /// <summary>
+        /// Set the Input Filter
+        /// </summary>
+        /// <param name="inputFilter"></param>
+        /// <returns></returns>
+        public Input setInputFilter(InputFilter inputFilter)
+        {
+            this.inputFilter = inputFilter;
+            return this;
         }
 
         /// <summary>
@@ -187,10 +200,13 @@ namespace BimmCore.MonoGame.Components
         /// <param name="key"></param>
         private void OnKeyDown(Keys key)
         {
-            if (key == Keys.Back && text.Length > 0)
-                text = text.Substring(0, text.Length - 1);
-            else if (key.ToString().Length == 1)
-                text += key.ToString();
+            if (matchesFilter(key))
+            {
+                if (key == Keys.Back && text.Length > 0)
+                    text = text.Substring(0, text.Length - 1);
+                else if (key.ToString().Length == 1)
+                    text += key.ToString();
+            }
         }
 
         /// <summary>
@@ -208,6 +224,18 @@ namespace BimmCore.MonoGame.Components
         public string getText()
         {
             return text;
+        }
+
+        public bool matchesFilter(Keys key)
+        {
+            if (inputFilter == InputFilter.ALL)
+                return true;
+            else if (inputFilter == InputFilter.NUMBER)
+                return (key == Keys.Back || key.ToString().Contains("NUM"));
+            else if (inputFilter == InputFilter.LETTER)
+                return !key.ToString().Contains("NUM");
+
+            return false;
         }
     }
 }
