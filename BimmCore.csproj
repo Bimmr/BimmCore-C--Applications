@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Console\ColorWriter.cs" />
+    <Compile Include="Console\Menu.cs" />
     <Compile Include="Misc\Direction.cs" />
     <Compile Include="Misc\FileHelper.cs" />
     <Compile Include="Misc\StringUtils.cs" />
